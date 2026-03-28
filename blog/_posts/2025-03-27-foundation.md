@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Foundation"
+title: "Part I: Foundation"
+series: "Building Python ASGI Framework"
 date: 2025-03-27
 reading_time: 2
 slug: foundation

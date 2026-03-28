@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Hello World"
+title: "Part II: Hello World"
+series: "Building Python ASGI Framework"
 date: 2025-03-28
 reading_time: 2
 slug: hello-world
