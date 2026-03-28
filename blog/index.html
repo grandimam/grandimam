@@ -1,0 +1,33 @@
+---
+layout: default
+title: Blog
+---
+
+<header class="header">
+  <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+  <p>{{ site.description }}</p>
+</header>
+
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+{% for year in posts_by_year %}
+  <div class="year">{{ year.name }}</div>
+
+  {% for post in year.items %}
+    <div class="post-item">
+      <span class="post-date">{{ post.date | date: "%b %d" }}</span>
+      <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      {% if post.reading_time %}<span class="post-reading-time">{{ post.reading_time }} min</span>{% endif %}
+    </div>
+  {% endfor %}
+{% endfor %}
+
+<footer class="footer">
+  <div class="footer-links">
+    {% if site.social.twitter %}<a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif %}
+    {% if site.social.github %}<a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+    {% if site.social.linkedin %}<a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if site.social.email %}<a href="mailto:{{ site.social.email }}">Email</a>{% endif %}
+    <a href="{{ site.baseurl }}/feed.xml">RSS</a>
+  </div>
+</footer>
