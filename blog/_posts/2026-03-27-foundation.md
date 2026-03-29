@@ -14,7 +14,7 @@ The server part maybe confusing for some, so lets define it. A server is an appl
 
 An example of how we run server on our side (in FastAPI):
 
-```bash
+```python
 uvicorn main:app --reload
 ```
 
@@ -57,7 +57,7 @@ async def app(scope, receive, send):
     ...
 ```
 
-Note, the app doesn't have any return value. Frameworks receive an event, parse it, then send (or respond) to those events.
+Note, the app doesn't have any return value. We receive an event, parse it, then send (or respond) to those events.
 
 ## What's Next
 

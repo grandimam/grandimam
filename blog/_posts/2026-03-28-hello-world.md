@@ -26,8 +26,6 @@ async def app(scope, receive, send):
 
 That's the complete ASGI application. As mentioned in the [previous lesson](/posts/foundation/), ASGI is event-based - `http.response.start` and `http.response.body` are two such event types.
 
-## Implementation
-
 As highlighted in [Foundation](/posts/foundation/), the scope represents request info that doesn't change for the overall lifecycle of that request. The scope is a dict that has many items, but for now let's only worry about `type` which can be one of the following - http, lifespan, or websocket.
 
 > A small tangent here - what's the difference between WSGI and ASGI? WSGI is synchronous - one request in, one response out. ASGI is async and event-based, which allows it to handle long-lived connections like WebSockets.
@@ -47,7 +45,7 @@ We send two events to complete an HTTP response:
 
 That's the minimum. Status and headers first, then body.
 
-## Run It
+## Running It
 
 Save the code in a file called `main.py` and run:
 
