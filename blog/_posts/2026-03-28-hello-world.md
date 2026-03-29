@@ -2,7 +2,7 @@
 layout: post
 title: "Part II: Hello World"
 series: "Building Python ASGI Framework"
-date: 2025-03-28
+date: 2026-03-28
 reading_time: 2
 slug: hello-world
 excerpt: "Build your first ASGI application - a simple Hello World server that responds to all requests."
@@ -37,10 +37,12 @@ As highlighted in [Foundation](/posts/foundation/), the scope represents request
 We send two events to complete an HTTP response:
 
 **`http.response.start`** - Sends the status code and headers. Must be sent first.
+
 - `status` - HTTP status code (200, 404, 500, etc.)
 - `headers` - list of `(name, value)` tuples, both as bytes
 
 **`http.response.body`** - Sends the actual content.
+
 - `body` - the response body as bytes
 
 That's the minimum. Status and headers first, then body.
