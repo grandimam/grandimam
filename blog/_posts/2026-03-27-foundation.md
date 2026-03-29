@@ -44,22 +44,20 @@ uvicorn main:example --reload
 
 ## Components
 
-Our 'app' co-routine
+Our 'app' co-routine has the following components or parameters:
 
-Client sends a request. We have uvicorn server running on our end that listens to client requests and invokes the app (coroutine). The app coroutine is simply an async function with a few parameters that define how an application must listen and respond to HTTP requests (or events).
+- **scope: Dict** - request info (path, method, headers)
+- **receive: Callable** - reads incoming body/events
+- **send: Callable** - sends response back
 
-There are three main components of ASGI - scope, receive, and send. It's simply a coroutine that the server waits on for response.
+Client sends a request. Our server listens to requests and invokes the app (coroutine) - which is an async co-routine that define how an application must listen and respond to HTTP requests.
 
 ```python
 async def app(scope, receive, send):
     ...
 ```
 
-- **scope** - request info (path, method, headers)
-- **receive** - reads incoming body/events
-- **send** - sends response back
-
-Note, the app doesn't have any return value. It's entirely event-based. Frameworks receive an event, parse it, then send (or respond) to those events.
+Note, the app doesn't have any return value. Frameworks receive an event, parse it, then send (or respond) to those events.
 
 ## What's Next
 
