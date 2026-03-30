@@ -1,16 +1,16 @@
 Python developer focused on async, ASGI, and the GIL-free future.
 
 - Building [Papuli](https://github.com/grandimam/papuli) - an ASGI toolkit/framework from scratch
-- Writing about Python internals at [blog.grandimam.net](https://blog.grandimam.net)
+- Writing about Python internals at [blog.grandimam.com](https://blog.grandimam.com)
 
 ## Writing
 
-Recent posts from [blog.grandimam.net](https://blog.grandimam.net):
+Recent posts from [blog.grandimam.com](https://blog.grandimam.com):
 
-- [Foundation](https://blog.grandimam.net/posts/foundation/) - Understanding ASGI basics
-- [Hello World](https://blog.grandimam.net/posts/hello-world/) - Your first ASGI application
+- [Foundation](https://blog.grandimam.com/posts/foundation/) - Understanding ASGI basics
+- [Hello World](https://blog.grandimam.com/posts/hello-world/) - Your first ASGI application
 
 ## Connect
 
-- Blog: [blog.grandimam.net](https://blog.grandimam.net)
+- Blog: [blog.grandimam.com](https://blog.grandimam.com)
 - Twitter: [@thegrandimam](https://twitter.com/thegrandimam)
