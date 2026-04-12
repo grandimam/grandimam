@@ -29,9 +29,9 @@ Software engineer. Python, async, and the GIL-free future.
 
 | Series                         | Part                                                                                    | Date     |
 | ------------------------------ | --------------------------------------------------------------------------------------- | -------- |
-| Building Python ASGI Framework | [Foundation](https://blog.grandimam.com/writing/foundation)                             | Mar 2026 |
-| Building Python ASGI Framework | [Hello World](https://blog.grandimam.com/writing/hello-world)                           | Mar 2026 |
-| Agentic Software Engineering   | [Writing Effective Skills](https://blog.grandimam.com/writing/writing-effective-skills) | Apr 2026 |
+| Building Python ASGI Framework | [Foundation](https://blog.grandimam.com/posts/foundation)                             | Mar 2026 |
+| Building Python ASGI Framework | [Hello World](https://blog.grandimam.com/posts/hello-world)                           | Mar 2026 |
+| Agentic Software Engineering   | [Writing Effective Skills](https://blog.grandimam.com/posts/writing-effective-skills) | Apr 2026 |
 
 ## Now
 
