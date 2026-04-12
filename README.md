@@ -1,12 +1,8 @@
-# Hi, I'm Fauzan
+# Hi, I'm Grandimam
 
-Software engineer who believes most code shouldn't exist. I build fast, minimal tools in Python and care deeply about simplicity.
+Software engineer. Python, async, and the GIL-free future.
 
-[![Email](https://img.shields.io/badge/Email-hello@grandimam.com-000?style=flat&logo=gmail&logoColor=white)](mailto:hello@grandimam.com)
 [![Blog](https://img.shields.io/badge/Blog-grandimam.com-000?style=flat&logo=hashnode&logoColor=white)](https://blog.grandimam.com)
-[![Twitter](https://img.shields.io/badge/Twitter-@grandimam-000?style=flat&logo=x&logoColor=white)](https://twitter.com/grandimam)
-
----
 
 ## Projects
 
@@ -16,14 +12,14 @@ Software engineer who believes most code shouldn't exist. I build fast, minimal 
 
 **[barq](https://github.com/grandimam/barq)** — HTTP framework for free-threaded Python 3.13+. No async. No GIL. Just threads.
 
-`621 lines` · `2-5x faster than FastAPI` · `Radix router, DI, Pydantic`
+`621 lines` · `2-5x faster than FastAPI`
 
 </td>
 <td width="50%">
 
-**[mirrorwork](https://github.com/grandimam/mirrorwork)** — AI-powered career gap analysis. Upload resume, match jobs, get improvements.
+**[mitti](https://github.com/grandimam/mitti)** — Learn to build an ASGI toolkit/framework from scratch, similar to Starlette.
 
-`FastAPI` · `Claude` · `React`
+`Python` · `Claude`
 
 </td>
 </tr>
@@ -31,11 +27,11 @@ Software engineer who believes most code shouldn't exist. I build fast, minimal 
 
 ## Writing
 
-| Series | Part | Date |
-|--------|------|------|
-| Building Python ASGI Framework | [Foundation](https://blog.grandimam.com/writing/foundation) | Mar 2026 |
-| Building Python ASGI Framework | [Hello World](https://blog.grandimam.com/writing/hello-world) | Mar 2026 |
-| Agentic Software Engineering | [Writing Effective Skills](https://blog.grandimam.com/writing/writing-effective-skills) | Apr 2026 |
+| Series                         | Part                                                                                    | Date     |
+| ------------------------------ | --------------------------------------------------------------------------------------- | -------- |
+| Building Python ASGI Framework | [Foundation](https://blog.grandimam.com/writing/foundation)                             | Mar 2026 |
+| Building Python ASGI Framework | [Hello World](https://blog.grandimam.com/writing/hello-world)                           | Mar 2026 |
+| Agentic Software Engineering   | [Writing Effective Skills](https://blog.grandimam.com/writing/writing-effective-skills) | Apr 2026 |
 
 ## Now
 
@@ -45,7 +41,7 @@ Software engineer who believes most code shouldn't exist. I build fast, minimal 
 
 ## Stack
 
-`Python` · `TypeScript` · `Go` · `FastAPI` · `React` · `Docker` · `Terraform` · `PostgreSQL` · `Redis` · `Claude`
+`Python` · `FastAPI` · `Docker` · `PostgreSQL` · `Redis` · `Claude`
 
 ## Principles
 

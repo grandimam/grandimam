@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Part I: Writing Effective Skills"
+title: "Agentic Software Engineering Series: Writing Effective Skills"
 series: "Agentic Software Engineering"
 date: 2026-04-12
 reading_time: 2
@@ -12,7 +12,7 @@ excerpt: ""
 
 Software Engineering as we see it today is slowly transforming itself towards a more Agentic workflow. This is not new; there was a time where software was packaged and manually SCP'd into individual servers and executed. We have automated that process and it is now part of our SDLC phase called CI/CD.
 
-What was a manual process earlier slowly automated by writing Terraform or Helm scripts that can be configured and deployed using a single-click operation. We are seeing a similar shift happening in the process of writing code itself — what used to be a manual process involving IDEs is now being done through Agents.
+What was a manual process earlier slowly automated by writing Terraform or Helm scripts that can be configured and deployed using a single-click operation. We are seeing a similar shift happening in the process of writing code itself - what used to be a manual process involving IDEs is now being done through Agents.
 
 ## Agent and Agentic Loop
 
@@ -30,10 +30,10 @@ while True:
         # execute tool
 ```
 
-From the above example, you can see that the instruction capture is performed outside of the engine but the tool-calling operations are controlled by the engine (LLM in our case). This process can be done without an LLM by simply having a pre-defined rules engine and pattern matching — but LLMs bring flexibility and natural language understanding that static rules cannot. The goal of agentic development is continuously making this loop work efficiently.
+From the above example, you can see that the instruction capture is performed outside of the engine but the tool-calling operations are controlled by the engine (LLM in our case). This process can be done without an LLM by simply having a pre-defined rules engine and pattern matching - but LLMs bring flexibility and natural language understanding that static rules cannot. The goal of agentic development is continuously making this loop work efficiently.
 
 So how do we make this loop efficient? One key mechanism is skills - which enable specialized agent behaviors for specific tasks.
 
 ### Skills
 
-Skills are composable, reusable prompts that define how an agent should behave during specialized workflows. They are invoked on-demand — loaded into the agent's context only when a matching task is detected.
+Skills are composable, reusable prompts that define how an agent should behave during specialized workflows. They are invoked on-demand - loaded into the agent's context only when a matching task is detected.
