@@ -43,14 +43,4 @@ Software engineer. Python, async, and the GIL-free future.
 
 `Python` · `FastAPI` · `Docker` · `PostgreSQL` · `Redis` · `Claude`
 
-## Principles
-
-- **Code** — less is more
-- **Abstraction** — earn it, don't assume it
-- **Typing** — heavy, always
-- **Structure** — flat over nested
-- **Complexity** — delete it
-
----
-
 <sub>Open to collaborations, Python tooling, and systems problems.</sub>

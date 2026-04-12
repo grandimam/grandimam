@@ -20,7 +20,9 @@ At their core, an Agent is a loop that runs continuously - capturing user instru
 
 ### The LLM as Decision Engine
 
-LLMs play an important role in the agentic loop. They serve as the core inference engine - determining what instructions to capture, which tools to call, and how to execute them. A simple agentic loop:
+LLMs play an important role in the agentic loop. They serve as the core inference engine - determining what instructions to capture, which tools to call, and how to execute them.
+
+A simple example of an agentic loop:
 
 ```python
 while True:
