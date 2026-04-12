@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Agentic Software Engineering Series: Writing Effective Skills"
+title: "Agentic Software Engineering: Writing Effective Skills"
 series: "Agentic Software Engineering"
 date: 2026-04-12
 reading_time: 2
