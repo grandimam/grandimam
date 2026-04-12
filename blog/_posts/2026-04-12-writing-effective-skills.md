@@ -8,6 +8,8 @@ slug: writing-effective-skills
 excerpt: ""
 ---
 
+> **Note:** This post is a work in progress and will be updated over time.
+
 Software Engineering as we see it today is slowly transforming itself towards a more Agentic workflow. This is not new; there was a time where software was packaged and manually SCP'd into individual servers and executed. We have automated that process and it is now part of our SDLC phase called CI/CD.
 
 What was a manual process earlier slowly automated by writing Terraform or Helm scripts that can be configured and deployed using a single-click operation. We are seeing a similar shift happening in the process of writing code itself — what used to be a manual process involving IDEs is now being done through Agents.
