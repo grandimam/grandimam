@@ -1,144 +1,60 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="terminal-header.svg">
-  <source media="(prefers-color-scheme: light)" srcset="terminal-header-light.svg">
-  <img alt="Terminal Profile" src="terminal-header.svg" width="100%">
-</picture>
+# Hi, I'm Fauzan
 
-<br>
+Software engineer who believes most code shouldn't exist. I build fast, minimal tools in Python and care deeply about simplicity.
 
-<details>
-<summary><code>❯ ls -la ~/projects</code></summary>
+[![Email](https://img.shields.io/badge/Email-hello@grandimam.com-000?style=flat&logo=gmail&logoColor=white)](mailto:hello@grandimam.com)
+[![Blog](https://img.shields.io/badge/Blog-grandimam.com-000?style=flat&logo=hashnode&logoColor=white)](https://blog.grandimam.com)
+[![Twitter](https://img.shields.io/badge/Twitter-@grandimam-000?style=flat&logo=x&logoColor=white)](https://twitter.com/grandimam)
 
-<br>
+---
 
-```bash
-drwxr-xr-x  barq/           # Free-threaded HTTP framework
-drwxr-xr-x  mirrorwork/     # AI resume gap analysis
-drwxr-xr-x  qalam/          # Writing tools
-```
+## Projects
 
 <table>
 <tr>
 <td width="50%">
 
-### ⚡ [barq](https://github.com/grandimam/barq)
+**[barq](https://github.com/grandimam/barq)** — HTTP framework for free-threaded Python 3.13+. No async. No GIL. Just threads.
 
-HTTP framework for **free-threaded Python 3.13+**
-
-No async. No GIL. Just threads.
-
-```diff
-+ 2-5x faster than FastAPI
-+ 621 lines of pure Python
-+ Radix router, DI, Pydantic
-```
+`621 lines` · `2-5x faster than FastAPI` · `Radix router, DI, Pydantic`
 
 </td>
 <td width="50%">
 
-### 🪞 [mirrorwork](https://github.com/grandimam/mirrorwork)
+**[mirrorwork](https://github.com/grandimam/mirrorwork)** — AI-powered career gap analysis. Upload resume, match jobs, get improvements.
 
-AI-powered career gap analysis
-
-Upload resume → Match jobs → Get improvements
-
-```
-FastAPI + Claude + React
-```
+`FastAPI` · `Claude` · `React`
 
 </td>
 </tr>
 </table>
 
-</details>
+## Writing
 
-<details>
-<summary><code>❯ cat ~/.config/principles</code></summary>
+| Series | Part | Date |
+|--------|------|------|
+| Building Python ASGI Framework | [Foundation](https://blog.grandimam.com/writing/foundation) | Mar 2026 |
+| Building Python ASGI Framework | [Hello World](https://blog.grandimam.com/writing/hello-world) | Mar 2026 |
+| Agentic Software Engineering | [Writing Effective Skills](https://blog.grandimam.com/writing/writing-effective-skills) | Apr 2026 |
 
-<br>
+## Now
 
-```python
-PRINCIPLES = {
-    "code": "less is more",
-    "abstraction": "earn it, don't assume it",
-    "typing": "heavy, always",
-    "structure": "flat over nested",
-    "complexity": "delete it",
-}
+- Building **barq** — a free-threaded Python HTTP framework
+- Writing about **agentic software engineering**
+- Exploring **Python 3.13+** without the GIL
 
-def should_write_code(feature: str) -> bool:
-    """Most code shouldn't exist."""
-    return absolutely_necessary(feature)
-```
+## Stack
 
-</details>
+`Python` · `TypeScript` · `Go` · `FastAPI` · `React` · `Docker` · `Terraform` · `PostgreSQL` · `Redis` · `Claude`
 
-<details>
-<summary><code>❯ cat ~/interests.txt</code></summary>
+## Principles
 
-<br>
-
-```
-→ Free-threaded Python (PEP 703)
-→ Systems from scratch — HTTP servers, parsers, routers
-→ Performance without sacrificing simplicity
-→ The GIL-free future
-```
-
-</details>
-
-<details>
-<summary><code>❯ ./contact --help</code></summary>
-
-<br>
-
-```
-USAGE: ./contact [OPTIONS]
-
-OPTIONS:
-    --email     hello@grandimam.com
-    --blog      blog.grandimam.com
-    --twitter   @grandimam
-
-FLAGS:
-    --open-to   collaborations, python tooling, systems problems
-```
-
-[![Email](https://img.shields.io/badge/email-hello@grandimam.com-black?style=flat-square&logo=gmail)](mailto:hello@grandimam.com)
-[![Blog](https://img.shields.io/badge/blog-grandimam.com-black?style=flat-square&logo=hashnode)](https://blog.grandimam.com)
-[![Twitter](https://img.shields.io/badge/twitter-@grandimam-black?style=flat-square&logo=x)](https://twitter.com/grandimam)
-
-</details>
-
-<details>
-<summary><code>❯ history | tail -5</code></summary>
-
-<br>
-
-```
-1024  mass-delete abstractions
-1025  git push --force-with-lease (after review)
-1026  benchmark barq vs fastapi (again)
-1027  remove 200 lines, keep functionality
-1028  coffee && code
-```
-
-</details>
+- **Code** — less is more
+- **Abstraction** — earn it, don't assume it
+- **Typing** — heavy, always
+- **Structure** — flat over nested
+- **Complexity** — delete it
 
 ---
 
-<sub>
-
-```
-❯ fortune | cowsay
- _______________________________________
-< Building foundations others ship on. >
- ---------------------------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
-```
-
-</sub>
+<sub>Open to collaborations, Python tooling, and systems problems.</sub>
