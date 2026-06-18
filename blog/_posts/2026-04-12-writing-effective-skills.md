@@ -34,8 +34,14 @@ while True:
 
 From the above example, you can see that the instruction capture is performed outside of the engine but the tool-calling operations are controlled by the engine (LLM in our case). This process can be done without an LLM by simply having a pre-defined rules engine and pattern matching - but LLMs bring flexibility and natural language understanding that static rules cannot. The goal of agentic development is continuously making this loop work efficiently.
 
-So how do we make this loop efficient? One key mechanism is skills - which enable specialized agent behaviors for specific tasks.
+And **skills** are one of the ways of making this loop efficient - enabling specialized agent behaviors for specific tasks.
 
-### Skills
+> **Note:** The agentic loop has two aspects: model and tools. The model uses the tools heavily to inform its reasoning. You can think of tools as something the model uses to understand and reason about the environment its in.
 
-Skills are composable, reusable prompts that define how an agent should behave during specialized workflows. They are invoked on-demand - loaded into the agent's context only when a matching task is detected.
+## Skills
+
+Skills are composable prompts that define how an agent behaves when working on specific tasks. They are invoked on-demand - loaded into the agent's context only when a matching task is detected.
+
+### Skills vs Commands
+
+Earlier releases of Claude Code has commands which are pre-configured executable actions similar to tools. Commands are executed by the users, and are pre-loaded into the context. The recent release of the Claude Code has removed that and only skills are available.
