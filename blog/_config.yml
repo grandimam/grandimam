@@ -17,6 +17,7 @@ social:
 # Build settings
 markdown: kramdown
 highlighter: rouge
+future: true
 permalink: /posts/:slug/
 paginate: 10
 paginate_path: "/page:num/"
