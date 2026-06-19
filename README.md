@@ -11,39 +11,17 @@
 
 [![Blog](https://img.shields.io/badge/Blog-grandimam.com-000?style=flat&logo=hashnode&logoColor=white)](https://blog.grandimam.com)
 
----
-
-## Projects
+### Projects
 
 | Project                                       | Description                                                                            | Stack                                    |
 | --------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------- |
 | **[barq](https://github.com/grandimam/barq)** | HTTP framework for free-threaded Python 3.13+. No async. No GIL. Just threads.         | `621 lines` · `2-5x faster than FastAPI` |
 | **[wasl](https://github.com/grandimam/wasl)** | Lightweight ASGI framework built on Starlette. Clean, minimal API inspired by FastAPI. | `Python` · `Starlette` · `Pydantic`      |
 
----
-
-## Writing
+### Writing
 
 | Series                         | Part                                                                                  | Date     |
 | ------------------------------ | ------------------------------------------------------------------------------------- | -------- |
 | Building Python ASGI Framework | [Foundation](https://blog.grandimam.com/posts/foundation)                             | Mar 2026 |
 | Building Python ASGI Framework | [Hello World](https://blog.grandimam.com/posts/hello-world)                           | Mar 2026 |
 | Agentic Software Engineering   | [Writing Effective Skills](https://blog.grandimam.com/posts/writing-effective-skills) | Apr 2026 |
-
----
-
-## Now
-
-- Building **barq** — a free-threaded Python HTTP framework
-- Exploring **Python 3.13+** without the GIL
-- Writing about **concurrency and parallelism** in Python
-
----
-
-## Stack
-
-```
-Python · asyncio · threading · multiprocessing · FastAPI · Starlette
-```
-
-<sub>Open to collaborations on Python tooling, concurrency, and systems problems.</sub>
