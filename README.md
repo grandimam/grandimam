@@ -7,16 +7,15 @@
  |___/
 ```
 
-**Python backend engineer.** I build things at the intersection of concurrency, parallelism, and web frameworks. Currently exploring what Python looks like without the GIL - building [barq](https://github.com/grandimam/barq), a threaded HTTP framework for free-threaded Python 3.13+, and [chai](https://github.com/grandimam/chai), a minimal ASGI framework. I write about what I learn along the way.
+**Python backend engineer.** I build things at the intersection of concurrency, parallelism, and web frameworks. Currently exploring what Python looks like without the GIL - building [karak](https://github.com/grandimam/karak), a threaded HTTP framework for free-threaded Python 3.13+. I write about what I learn along the way.
 
 [![Blog](https://img.shields.io/badge/Blog-grandimam.com-000?style=flat&logo=hashnode&logoColor=white)](https://blog.grandimam.com)
 
 ### Projects
 
-| Project                                       | Description                                                                            | Stack                                    |
-| --------------------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------- |
-| **[barq](https://github.com/grandimam/barq)** | HTTP framework for free-threaded Python 3.13+. No async. No GIL. Just threads.         | `621 lines` · `2-5x faster than FastAPI` |
-| **[chai](https://github.com/grandimam/chai)** | Lightweight ASGI framework built on Starlette. Clean, minimal API inspired by FastAPI. | `Python` · `Starlette` · `Pydantic`      |
+| Project                                         | Description                                                                    | Stack                                    |
+| ----------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
+| **[karak](https://github.com/grandimam/karak)** | HTTP framework for free-threaded Python 3.13+. No async. No GIL. Just threads. | `621 lines` · `2-5x faster than FastAPI` |
 
 ### Writing
 
