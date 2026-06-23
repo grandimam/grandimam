@@ -7,15 +7,19 @@
  |___/
 ```
 
-**Python backend engineer.** I build things at the intersection of concurrency, parallelism, and web frameworks. Currently exploring what Python looks like without the GIL - building [karak](https://github.com/grandimam/karak), a threaded HTTP framework for free-threaded Python 3.13+. I write about what I learn along the way.
+**High-performance Python engineer.** I push Python to its limits - threading, parallelism, and low-level optimizations. Currently building [karak](https://github.com/grandimam/karak), a threaded HTTP framework for free-threaded Python 3.13+ that's 2-5x faster than FastAPI. No async. No GIL. Just threads.
 
 [![Blog](https://img.shields.io/badge/Blog-grandimam.com-000?style=flat&logo=hashnode&logoColor=white)](https://blog.grandimam.com)
+
+### Focus
+
+`free-threaded Python` · `GIL-free concurrency` · `ASGI/WSGI internals` · `low-latency systems` · `Python 3.13+`
 
 ### Projects
 
 | Project                                         | Description                                                                    | Stack                                    |
 | ----------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- |
-| **[karak](https://github.com/grandimam/karak)** | HTTP framework for free-threaded Python 3.13+. No async. No GIL. Just threads. | `621 lines` · `2-5x faster than FastAPI` |
+| **[karak](https://github.com/grandimam/karak)** | Threaded HTTP framework for free-threaded Python. True parallelism without async complexity. | `621 lines` · `2-5x faster than FastAPI` |
 
 ### Writing
 
