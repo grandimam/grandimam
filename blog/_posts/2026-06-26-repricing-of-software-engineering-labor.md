@@ -13,7 +13,7 @@ Looking back over the last decade, I have mixed feelings about some of the calls
 
 ## Generalist SWEs were a product of cheap money
 
-The late 2010s, I saw an huge amount of startup funding, globally and in India. Flipkart, Snapdeal, Jugnoo, and hundreds of others were scaling hard and one hiring pattern I saw was that: everyone wanted generalist software engineers. People who could easily get upto speed across the stack.- backend, frontend, infra, deployment and simply ship.
+The late 2010s, I saw an huge amount of startup funding, globally. Flipkart, Snapdeal, Jugnoo, and hundreds of others were scaling hard and one hiring pattern I saw was that: everyone wanted generalist software engineers. People who could easily get upto speed across the stack.- backend, frontend, infra, deployment and simply ship.
 
 Building software was expensive. Automation was still low. Kubernetes had just gone mainstream. Shipping still meant a surprising amount of manual work: SSH-ing into servers, copying artifacts around, running `mvn` builds by hand, debugging deployments straight in production, duct-taping infrastructure that today you would never touch.
 
@@ -59,4 +59,4 @@ For the first time in a long time, I think the biggest returns in this field com
 
 ---
 
-*AI was used to assist with grammar and editing.*
+_AI was used to assist with grammar and editing._
