@@ -31,7 +31,7 @@ If your main value is stiching systems out of known frameworks and well-understo
 
 ## Repricing of the Middle Layer
 
-I don't think software engineering is disappearing. I think the market is repricing it. For years it rewarded implementation throughput. Engineers that were able to move fast and build stuff are becoming obselete overnight. These are large middle—implementation-heavy generalists whose value was mostly shipping software built from known patterns.
+I don't think software engineering is disappearing. I think the market is repricing it. For years it rewarded implementation throughput. Engineers that were able to move fast and build stuff are becoming obselete overnight. These are large middle implementation-heavy generalists whose value was mostly shipping software built from known patterns.
 
 The distinguished engineers sit above this collapse because their value was never implementation bandwidth in the first place; it was depth, judgment, and ownership. The middle layer never had any moat.
 
@@ -49,7 +49,7 @@ It is not prompting but it's judgment earned through experience, not code genera
 
 Like a lot of people, I have spent time building AI-native tooling myself ([Barebone](https://github.com/grandimam/barebone)). And ironically, even this layer is crowded already.
 
-Agent frameworks, orchestration libraries, workflow engines, thin wrappers around foundation models—they are multiplying faster than they can meaningfully differentiate. Calling yourself an "AI engineer" is not going to be a moat.
+Agent frameworks, orchestration libraries, workflow engines, thin wrappers around foundation models, they are multiplying faster than they can meaningfully differentiate. Calling yourself an "AI engineer" is not going to be a moat.
 
 I dont think LLMs eliminate engineering. PMs and domain experts can increasingly build prototypes, validate ideas, and ship internal tools with AI-assisted workflows. They are moving into what used to be engineering territory but mostly at the prototype layer.
 
