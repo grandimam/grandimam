@@ -1,6 +1,6 @@
 # Site settings
 title: Grandimam
-description: Python, async, and the GIL-free future
+description: Python | Performance & Concurrency
 baseurl: ""
 url: "https://blog.grandimam.com"
 

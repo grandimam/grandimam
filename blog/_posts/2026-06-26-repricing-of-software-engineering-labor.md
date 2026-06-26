@@ -56,7 +56,3 @@ I dont think LLMs eliminate engineering. PMs and domain experts can increasingly
 Production is a different animal. It still needs engineers who understand reliability, scale, security, performance, observability, and operational trade-offs. The market is not killing the generalist software engineer but it is collapsing the premium for implementation-heavy work and raising the premium for deep expertise and real systems intuition.
 
 For the first time in a long time, I think the biggest returns in this field come not from knowing a little about everything, but from knowing one hard thing exceptionally well.
-
----
-
-_AI was used to assist with grammar and editing._
