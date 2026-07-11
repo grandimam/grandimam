@@ -7,7 +7,7 @@ slug: how-hacker-rank-scores-engineers
 excerpt: "The hardest part of building an LLM scoring tool isn't the model — it's the rubric. HackerRank open-sourced theirs. I read it, ran it, and faked a few resumes to test it."
 ---
 
-I have been doing my goal-setting, KPIs, and feedback assessments through LLMs. The hardest part was designing the scoring mechanism. When HackerRank open-sourced their [Hiring Agent](https://github.com/interviewstreet/hiring-agent), I wanted to understand how they had solved the same problem — and what biases their rubric encodes.
+I have been doing my goal-setting, KPIs, and feedback assessments through LLMs. The hardest part was designing the scoring mechanism. When HackerRank open-sourced their [Hiring Agent](https://github.com/interviewstreet/hiring-agent), I wanted to understand how they had solved the same problem and what biases their rubric encodes.
 
 
 [Hiring Agent](https://github.com/interviewstreet/hiring-agent) is an LLM-based resume scoring tool that parses a PDF, enriches it with GitHub and blog data, and returns a score. It's straightforward to run — clone the repo, point it at a PDF:
@@ -21,18 +21,18 @@ $ python3 score.py /examples/java-engineer.pdf
 The tool returns a structured score:
 
 ```bash
-================================================================================
-📊 RESUME EVALUATION RESULTS FOR: Senior Java Engineer
-================================================================================
+==========================================
+📊 RESUME EVALUATION: Senior Java Engineer
+==========================================
 
 🎯 OVERALL SCORE: 71.0/100
-🌐 Open Source:          12/35
-🚀 Self Projects:        18/30
+🌐 Open Source:           12/35
+🚀 Self Projects:         18/30
 🏢 Production Experience: 25/25
-💻 Technical Skills:      8/10
+💻 Technical Skills:       8/10
 
 ✅ KEY STRENGTHS:
-------------------------------
+------------------------------------------
   1. Microservices Architecture
   2. Event-Driven Systems
   3. Cloud Technologies
@@ -40,7 +40,7 @@ The tool returns a structured score:
   5. API Design
 
 🔧 AREAS FOR IMPROVEMENT:
-------------------------------
+------------------------------------------
   1. Lack of Open Source Contributions
   2. Limited GitHub Activity
   3. No Publicly Available Projects
