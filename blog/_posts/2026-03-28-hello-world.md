@@ -1,5 +1,6 @@
 ---
 layout: post
+topic: python
 title: "Part II: Hello World"
 series: "Building Python ASGI Framework"
 date: 2026-03-28

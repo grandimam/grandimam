@@ -1,5 +1,6 @@
 ---
 layout: post
+topic: essays
 title: "Distorted Reality"
 date: 2026-07-08
 reading_time: 4

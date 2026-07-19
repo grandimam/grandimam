@@ -1,5 +1,6 @@
 ---
 layout: post
+topic: python
 title: "Part I: Foundation"
 series: "Building Python ASGI Framework"
 date: 2026-03-27

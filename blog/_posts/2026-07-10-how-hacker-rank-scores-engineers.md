@@ -1,5 +1,6 @@
 ---
 layout: post
+topic: essays
 title: "How HackerRank Scores Engineers"
 date: 2026-07-10
 reading_time: 7
@@ -8,7 +9,6 @@ excerpt: "The hardest part of building an LLM scoring tool isn't the model — i
 ---
 
 I have been doing my goal-setting, KPIs, and feedback assessments through LLMs. The hardest part was designing the scoring mechanism. When HackerRank open-sourced their [Hiring Agent](https://github.com/interviewstreet/hiring-agent), I wanted to understand how they had solved the same problem and what biases their rubric encodes.
-
 
 [Hiring Agent](https://github.com/interviewstreet/hiring-agent) is an LLM-based resume scoring tool that parses a PDF, enriches it with GitHub and blog data, and returns a score. It's straightforward to run — clone the repo, point it at a PDF:
 
@@ -53,6 +53,7 @@ I first provided it with a Senior Java Engineer resume. Though the profile has a
 It starts in `score.py` where the PDF is handed off to a `PDFHandler`:
 
 **score.py:251-252**
+
 ```python
 pdf_handler = PDFHandler()
 resume_data = pdf_handler.extract_json_from_pdf(pdf_path)
@@ -61,6 +62,7 @@ resume_data = pdf_handler.extract_json_from_pdf(pdf_path)
 Inside extract_json_from_pdf, the PDF is parsed using PyMuPDF and converted to Markdown:
 
 **pdf.py:54-57**
+
 ```python
 resume_text = to_markdown(
     doc,
@@ -78,11 +80,11 @@ The Markdown parser reads left-to-right, so the content is incorrectly extracted
 
 **Coding, Framework, Messaging, Database, Observability, Containers, Patterns, Cloud, Java, Python...**
 
-How well the LLM recovers from this depends on the model used. A more concrete solution would be to screenshot the resume and let the model parse it directly, rather than converting to Markdown first - similar to how Claude/Codex parses websites. The sections are then extracted individually using specialized prompts, each being an LLM call to the model. 
+How well the LLM recovers from this depends on the model used. A more concrete solution would be to screenshot the resume and let the model parse it directly, rather than converting to Markdown first - similar to how Claude/Codex parses websites. The sections are then extracted individually using specialized prompts, each being an LLM call to the model.
 
 ## 2. Scoring Criteria
 
-Almost all the intelligence is prompts, available in `prompts/templates/` directory. Python is merely used in orchestration and plumbing. 
+Almost all the intelligence is prompts, available in `prompts/templates/` directory. Python is merely used in orchestration and plumbing.
 
 ```
 "basics": "basics.jinja",
@@ -117,7 +119,7 @@ There are explicit rules that mention what projects are considered open-source a
 - When GitHub data shows all projects are 'self_project' type, open source score MUST be 10 points or less
 ```
 
-And one that interested me most was the following rule: 
+And one that interested me most was the following rule:
 
 ```
 **SPECIAL CONSIDERATION FOR STARTUP EXPERIENCE**: Give extra points for founder roles, co-founder positions, or early-stage engineer roles (first 10-20 employees) at startups, as these demonstrate exceptional initiative, technical leadership, and ability to build products from scratch.
@@ -168,4 +170,4 @@ This is the same problem I was trying to solve in my own tool. The hard part of 
 
 The git history is also interesting. The active development spans 77 days (July 29 to October 15, 2025) followed by a 231-day silence, then a handful of cleanup commits in June 2026 before open-sourcing. The commit patterns look like a burst of internal hackathon or intern work, not a sustained effort.
 
-This matters because the company that is open-sourcing the project is one of the players in the domain. The criteria defined: open source at 35%, technical skills at 10% feels like someone's first draft and not a thoroughly validated hiring framework. There are inconsistencies also in the project that highlight that these are the rough edges of a prototype, not a production system. This tool must be used with caution as it's a first attempt at LLM-based hiring looks like, before it's been tested against thousands of real candidates and calibrated by recruiting teams. 
+This matters because the company that is open-sourcing the project is one of the players in the domain. The criteria defined: open source at 35%, technical skills at 10% feels like someone's first draft and not a thoroughly validated hiring framework. There are inconsistencies also in the project that highlight that these are the rough edges of a prototype, not a production system. This tool must be used with caution as it's a first attempt at LLM-based hiring looks like, before it's been tested against thousands of real candidates and calibrated by recruiting teams.

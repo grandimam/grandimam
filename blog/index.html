@@ -5,29 +5,38 @@ title: Blog
 
 <header class="header">
   <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-  <p>{{ site.description }}</p>
+  <p class="tagline">{{ site.description }}</p>
+  {% include topics.html active="all" %}
 </header>
 
-{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for t in site.topics %}
+  {% assign topic_posts = site.posts | where: "topic", t.name | sort: "date" | reverse %}
+  <section class="topic-section">
+    <a class="topic-section-header" href="{{ site.baseurl }}/{{ t.name }}/">
+      <span class="topic-section-name">{{ t.title }}</span>
+      <span class="topic-section-meta">
+        <span class="topic-section-count">{{ topic_posts | size }}</span>
+        <span class="topic-section-arrow">→</span>
+      </span>
+    </a>
 
-{% for year in posts_by_year %}
-  <div class="year">{{ year.name }}</div>
-
-  {% for post in year.items %}
-    <div class="post-item">
-      <span class="post-date">{{ post.date | date: "%b %d" }}</span>
-      <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      {% if post.reading_time %}<span class="post-reading-time">{{ post.reading_time }} min</span>{% endif %}
-    </div>
-  {% endfor %}
+    {% if topic_posts.size == 0 %}
+      <div class="topic-empty">Nothing here yet.</div>
+    {% else %}
+      {% for post in topic_posts %}
+        <div class="post-item">
+          <span class="post-date">{{ post.date | date: "%b %d" }}</span>
+          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          {% if post.reading_time %}<span class="post-reading-time">{{ post.reading_time }} min</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </section>
 {% endfor %}
 
 <footer class="footer">
   <div class="footer-links">
-    {% if site.social.twitter %}<a href="https://twitter.com/{{ site.social.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif %}
     {% if site.social.github %}<a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
-    {% if site.social.linkedin %}<a href="https://linkedin.com/in/{{ site.social.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
-    {% if site.social.email %}<a href="mailto:{{ site.social.email }}">Email</a>{% endif %}
     <a href="{{ site.baseurl }}/feed.xml">RSS</a>
   </div>
 </footer>

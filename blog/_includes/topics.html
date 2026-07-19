@@ -1,0 +1,7 @@
+{% assign current = include.active | default: 'all' %}
+<nav class="topics">
+  <a href="{{ site.baseurl }}/" class="topic{% if current == 'all' %} active{% endif %}">all</a>
+  {% for t in site.topics %}
+    <a href="{{ site.baseurl }}/{{ t.name }}/" class="topic{% if current == t.name %} active{% endif %}">{{ t.title | downcase }}</a>
+  {% endfor %}
+</nav>

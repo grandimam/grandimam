@@ -1,17 +1,15 @@
 # Site settings
 title: Grandimam
-description: Python | Performance & Concurrency
+description: Writing on Python, concurrency, engineering, and faith.
 baseurl: ""
 url: "https://blog.grandimam.com"
 
 # Author
 author:
   name: Grandimam
-  twitter: thegrandimam
 
 # Social
 social:
-  twitter: thegrandimam
   github: grandimam
 
 # Build settings
@@ -41,10 +39,14 @@ defaults:
     values:
       layout: "default"
 
-# Navigation (blog-only)
-navigation:
-  - title: posts
-    url: /
+# Topics
+topics:
+  - name: python
+    title: Python
+  - name: essays
+    title: Essays
+  - name: islam
+    title: Islam
 
 # Exclude from build
 exclude:

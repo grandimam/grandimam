@@ -1,5 +1,6 @@
 ---
 layout: post
+topic: essays
 title: "Repricing of Software Engineering Labor"
 date: 2026-06-26
 reading_time: 7

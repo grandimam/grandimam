@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<header class="header">
+  <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+  <p class="tagline">{{ site.description }}</p>
+  {% include topics.html active=page.topic %}
+</header>
+
+<section class="topic-header">
+  <h2 class="topic-name">{{ page.title }}</h2>
+  {% assign topic_posts = site.posts | where: "topic", page.topic %}
+  <p class="topic-count">{{ topic_posts | size }} post{% if topic_posts.size != 1 %}s{% endif %}</p>
+</section>
+
+{% assign posts_by_year = topic_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+{% if topic_posts.size == 0 %}
+  <div class="topic-empty">
+    <p>Nothing here yet.</p>
+  </div>
+{% else %}
+  {% for year in posts_by_year %}
+    <div class="year">{{ year.name }}</div>
+
+    {% for post in year.items %}
+      <div class="post-item">
+        <span class="post-date">{{ post.date | date: "%b %d" }}</span>
+        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        {% if post.reading_time %}<span class="post-reading-time">{{ post.reading_time }} min</span>{% endif %}
+      </div>
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+<footer class="footer">
+  <div class="footer-links">
+    {% if site.social.github %}<a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+    <a href="{{ site.baseurl }}/feed.xml">RSS</a>
+  </div>
+</footer>
