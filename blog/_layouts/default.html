@@ -122,6 +122,25 @@
       opacity: 1;
     }
 
+    .header h1 a .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1.2em;
+      background-color: var(--text);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
     .header .tagline {
       font-size: 14px;
       color: var(--text-soft);

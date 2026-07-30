@@ -118,6 +118,29 @@
       opacity: 1;
     }
 
+    .back .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1em;
+      background-color: var(--text-mute);
+      margin-left: 2px;
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+    }
+
+    .back:hover .cursor {
+      background-color: var(--text);
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
     .post-layout {
       display: grid;
       grid-template-columns: 180px 1fr;
@@ -643,7 +666,7 @@
 </head>
 <body>
   <div class="container">
-    <a class="back" href="{{ site.baseurl }}/">← {{ site.title }}</a>
+    <a class="back" href="{{ site.baseurl }}/">← {{ site.title }}<span class="cursor"></span></a>
 
     <div class="post-layout">
       <nav class="toc" id="toc"></nav>
