@@ -1,6 +1,6 @@
 # Site settings
 title: grandimam_
-description: Writing on Python, concurrency, engineering, and faith.
+description: Personal homepage.
 baseurl: ""
 url: "https://blog.grandimam.com"
 
@@ -37,16 +37,14 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "default"
+      layout: "page"
 
 # Topics
 topics:
-  - name: python
-    title: Python
-  - name: essays
-    title: Essays
-  - name: islam
-    title: Islam
+  - name: projects
+    title: Projects
+  - name: opinions
+    title: Opinion Pieces
 
 # Exclude from build
 exclude:

@@ -1,31 +1,23 @@
-_Authored by **grandimam**, focused on building the next‑generation Python infrastructure through **wayofpy**._
+# blog.grandimam.com
 
-**wayofpy** is an open-source organization building high-performance, free-threaded Python systems that eliminate traditional concurrency limitations.
+Source code for my personal homepage.
 
-## Mission
+## Tech Stack
 
-To build the next generation of Python infrastructure that delivers free-threaded execution without GIL limitations, true parallelism, and production-ready components for modern distributed systems.
+- **Jekyll** - Static site generator
+- **GitHub Pages** - Hosting
+- **Minimal CSS** - Custom dark/light mode design
 
-## Projects
+## Local Development
 
-### karak
+```bash
+cd blog
+bundle install
+bundle exec jekyll serve
+```
 
-Free-threaded Python HTTP framework delivering true parallelism without async complexity.
+Visit `http://localhost:4000`
 
-- **GitHub**: [github.com/grandimam/karak](https://github.com/grandimam/karak)
+## License
 
-### osso
-
-Agent primitives for concurrent, stateful agents in free-threaded Python environments.
-
-- **GitHub**: [github.com/grandimam/osso](https://github.com/grandimam/osso)
-
-### zinda
-
-Low-level infrastructure components powering the wayofpy ecosystem.
-
-- **GitHub**: [github.com/grandimam/zinda](https://github.com/grandimam/zinda)
-
----
-
-[wayofpy.com](https://wayofpy.com) · [github.com/grandimam](https://github.com/grandimam)
+MIT

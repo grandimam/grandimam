@@ -1,6 +1,6 @@
 ---
 layout: post
-topic: python
+topic: opinions
 title: "Writing Effective Skills"
 series: "Agentic Software Engineering"
 date: 2026-04-12

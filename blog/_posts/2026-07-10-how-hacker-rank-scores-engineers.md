@@ -1,6 +1,6 @@
 ---
 layout: post
-topic: python
+topic: opinions
 title: "How HackerRank Scores Engineers"
 date: 2026-07-10
 reading_time: 7

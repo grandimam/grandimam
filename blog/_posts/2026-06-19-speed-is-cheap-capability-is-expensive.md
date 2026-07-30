@@ -1,6 +1,6 @@
 ---
 layout: post
-topic: essays
+topic: opinions
 title: "Speed is Cheap, Capability is Expensive"
 series: "Agentic Software Engineering"
 date: 2026-06-19
