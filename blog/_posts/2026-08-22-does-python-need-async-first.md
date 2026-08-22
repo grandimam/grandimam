@@ -7,8 +7,6 @@ reading_time: 3
 slug: does-python-still-need-to-be-async-first
 ---
 
-# Does Python Still Need to Be Async-First?
-
 If you are building APIs in Python that handle a lot of concurrent I/O, the standard answer today is often `asyncio` or a framework built around it. As a result, application code increasingly looks like this:
 
 ```python
@@ -21,7 +19,7 @@ The `async` keyword turns the function into a coroutine, allowing its execution 
 
 For I/O-bound applications, this model works well. While one coroutine is waiting for the network, database, or filesystem, another can make progress. The problem with this is that it forces one particular type of programming model, and you'd need a sort of escape hatch in case you want to do CPU computation. 
 
-## Problem of Async Programming Model
+## Async Programming Model
 
 Once an operation becomes asynchronous it tends to propagate through the call stack.
 
@@ -47,7 +45,7 @@ Traditional CPython has the **Global Interpreter Lock (GIL)**.
 
 The GIL means that, within a single interpreter, only one thread can execute Python bytecode at a time. So threads can provide excellent concurrency for many I/O workloads, but they traditionally haven't provided true parallel execution of Python code.
 
-For CPU-bound parallelism, Python applications have commonly turned to multiple processes, native extensions, or other mechanisms. But, that assumption 
+For CPU-bound parallelism, Python applications have commonly turned to multiple processes, native extensions, or other mechanisms. 
 
 Since Python 3.13, we now have a free-threaded build where the GIL can be disabled. This completely changes the assumption that has shaped Python architecture for a long time: **multiple threads can execute Python code in parallel.**
 
@@ -77,7 +75,7 @@ The developer describes **what the application does**. The framework decides **h
 
 On free-threaded Python, the same application model could potentially execute independent Python workloads in parallel. The application itself doesn't need to change.
 
-## An Experiment: Mitti
+## An Experiment: [Mitti](https://github.com/grandimam/mitti)
 
 I am building a small ASGI framework called **mitti** to explore this idea. The central premise is simple:
 
@@ -87,4 +85,4 @@ It is still very early. I am deliberately building the core pieces from first pr
 
 The goal isn't simply to build another FastAPI. I am interested in a more fundamental question: **What should a Python web framework look like in a free-threaded world?**
 
-Mitti is my attempt to find out: https://github.com/grandimam/mitti
+[Mitti is my attempt to find out](https://github.com/grandimam/mitti)
