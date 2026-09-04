@@ -4,13 +4,38 @@ title: Page Not Found
 permalink: /404.html
 ---
 
-<header class="header">
-  <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-  <p>{{ site.description }}</p>
-</header>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }}">
+      <img class="brand-mark" src="{{ site.baseurl }}/assets/images/gi-logo.svg" alt="GI logo">
+    </a>
 
-<div style="margin-top: 64px;">
-  <h2 style="font-size: 48px; font-weight: 600; margin-bottom: 16px;">404</h2>
-  <p style="font-size: 15px; color: #666; margin-bottom: 32px;">Page not found.</p>
-  <a href="{{ site.baseurl }}/" style="font-size: 14px; color: #666;">← Back to home</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="sidebar-link" href="{{ site.baseurl }}/">Writing</a>
+      <a class="sidebar-link" href="{{ site.baseurl }}/about/">About</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <div class="nameplate">{{ site.title }}</div>
+    <header class="masthead">
+      <div class="eyebrow">404</div>
+      <h1 class="title">Page Not Found</h1>
+      <p class="subtitle">The link is broken, outdated, or the page was removed.</p>
+    </header>
+
+    <div class="prose">
+      <p>The simplest next step is to go back to the <a class="inline-link" href="{{ site.baseurl }}/">homepage</a> and browse from there.</p>
+    </div>
+
+    <footer class="content-footer">
+      <div>&copy; 2026 {{ site.author.name }}.</div>
+      <div class="footer-links">
+        <a class="footer-link" href="https://github.com/grandimam" target="_blank" rel="noopener">GitHub</a>
+        <a class="footer-link" href="https://twitter.com/thegrandimam" target="_blank" rel="noopener">Twitter</a>
+        <a class="footer-link" href="{{ site.baseurl }}/feed.xml">RSS</a>
+      </div>
+    </footer>
+
+  </main>
 </div>

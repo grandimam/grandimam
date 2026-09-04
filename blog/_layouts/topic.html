@@ -2,41 +2,59 @@
 layout: default
 ---
 
-<header class="header">
-  <h1><a href="{{ site.baseurl }}/">{{ site.title }}<span class="cursor"></span></a></h1>
-  <p class="tagline">{{ site.description }}</p>
-  {% include topics.html active=page.topic %}
-</header>
-
-<section class="topic-header">
-  <h2 class="topic-name">{{ page.title }}</h2>
-  {% assign topic_posts = site.posts | where: "topic", page.topic %}
-  <p class="topic-count">{{ topic_posts | size }} post{% if topic_posts.size != 1 %}s{% endif %}</p>
-</section>
-
-{% assign posts_by_year = topic_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-
-{% if topic_posts.size == 0 %}
-  <div class="topic-empty">
-    <p>Nothing here yet.</p>
-  </div>
-{% else %}
-  {% for year in posts_by_year %}
-    <div class="year">{{ year.name }}</div>
-
-    {% for post in year.items %}
-      <div class="post-item">
-        <span class="post-date">{{ post.date | date: "%b %d" }}</span>
-        <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        {% if post.reading_time %}<span class="post-reading-time">{{ post.reading_time }} min</span>{% endif %}
-      </div>
-    {% endfor %}
-  {% endfor %}
+{% assign topic_posts = site.posts | where: "topic", page.topic | sort: "date" | reverse %}
+{% assign topic_label = 'Writing' %}
+{% assign writing_active = false %}
+{% assign projects_active = false %}
+{% if page.topic == 'opinions' %}
+  {% assign writing_active = true %}
+{% endif %}
+{% if page.topic == 'projects' %}
+  {% assign projects_active = true %}
+  {% assign topic_label = 'Projects' %}
 {% endif %}
 
-<footer class="footer">
-  <div class="footer-links">
-    {% if site.social.github %}<a href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
-    <a href="{{ site.baseurl }}/feed.xml">RSS</a>
-  </div>
-</footer>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }}">
+      <img class="brand-mark" src="{{ site.baseurl }}/assets/images/gi-logo.svg" alt="GI logo">
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a class="sidebar-link{% if writing_active %} active{% endif %}" href="{{ site.baseurl }}/">Writing</a>
+      <a class="sidebar-link" href="{{ site.baseurl }}/about/">About</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <div class="nameplate">{{ site.title }}</div>
+    <div class="section-heading">{{ page.title }}</div>
+
+    {% if topic_posts.size == 0 %}
+      <p class="empty">Nothing here yet.</p>
+    {% else %}
+      <section aria-label="{{ page.title }}">
+        <ol class="row-list">
+          {% for post in topic_posts %}
+            <li class="row-item">
+              <a class="row-link" href="{{ site.baseurl }}{{ post.url }}">
+                <span class="row-title">{{ post.title }}</span>
+                <span class="row-meta">{{ post.date | date: "%B %d, %Y" }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+    {% endif %}
+
+    <footer class="content-footer">
+      <div>&copy; 2026 {{ site.author.name }}.</div>
+      <div class="footer-links">
+        {% if site.social.github %}<a class="footer-link" href="https://github.com/{{ site.social.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+        <a class="footer-link" href="https://twitter.com/thegrandimam" target="_blank" rel="noopener">Twitter</a>
+        <a class="footer-link" href="{{ site.baseurl }}/feed.xml">RSS</a>
+      </div>
+    </footer>
+
+  </main>
+</div>

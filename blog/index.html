@@ -3,37 +3,48 @@ layout: default
 title: Home
 ---
 
-<header class="header">
-  <h1><a href="{{ site.baseurl }}/">grandimam_</a></h1>
-  <nav class="header-nav">
-    <a href="{{ site.baseurl }}/">Home</a>
-    <a href="{{ site.baseurl }}/about/">About</a>
-    <a href="https://wayofpy.com">WayOfPy</a>
-  </nav>
-</header>
+{% assign writing_posts = site.posts | where: "topic", "opinions" | sort: "date" | reverse %}
 
-<section class="section">
-  <h2 class="section-title">Opinion Pieces</h2>
-  {% assign opinion_posts = site.posts | where: "topic", "opinions" | sort: "date" | reverse %}
-  {% if opinion_posts.size == 0 %}
-    <p class="empty">Nothing here yet.</p>
-  {% else %}
-    <div class="posts-list">
-      {% for post in opinion_posts %}
-        <div class="post-item">
-          <span class="post-date">{{ post.date | date: "%b %d" }}</span>
-          <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-          {% if post.reading_time %}<span class="post-reading-time">{{ post.reading_time }} min</span>{% endif %}
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-</section>
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }}">
+      <img class="brand-mark" src="{{ site.baseurl }}/assets/images/gi-logo.svg" alt="GI logo">
+    </a>
 
-<footer class="footer">
-  <div class="footer-links">
-    <a href="https://github.com/grandimam" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://twitter.com/grandimam_" target="_blank" rel="noopener">Twitter</a>
-    <a href="https://youtube.com/@wayofpy" target="_blank" rel="noopener">YouTube</a>
-  </div>
-</footer>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="sidebar-link active" href="{{ site.baseurl }}/">Writing</a>
+      <a class="sidebar-link" href="{{ site.baseurl }}/about/">About</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <div class="nameplate">{{ site.title }}</div>
+
+    {% if writing_posts.size == 0 %}
+      <p class="empty">Nothing here yet.</p>
+    {% else %}
+      <section aria-label="Writing">
+        <ol class="row-list">
+          {% for post in writing_posts %}
+            <li class="row-item">
+              <a class="row-link" href="{{ site.baseurl }}{{ post.url }}">
+                <span class="row-title">{{ post.title }}</span>
+                <span class="row-meta">{{ post.date | date: "%B %d, %Y" }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+    {% endif %}
+
+    <footer class="content-footer">
+      <div>&copy; 2026 {{ site.author.name }}.</div>
+      <div class="footer-links">
+        <a class="footer-link" href="https://github.com/grandimam" target="_blank" rel="noopener">GitHub</a>
+        <a class="footer-link" href="https://twitter.com/thegrandimam" target="_blank" rel="noopener">Twitter</a>
+        <a class="footer-link" href="{{ site.baseurl }}/feed.xml">RSS</a>
+      </div>
+    </footer>
+
+  </main>
+</div>
