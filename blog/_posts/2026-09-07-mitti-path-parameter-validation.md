@@ -1,7 +1,7 @@
 ---
 layout: post
 topic: projects
-title: "Mitti: Path Parameter Validation"
+title: "Introducing Mitti"
 date: 2026-09-07
 reading_time: 1
 slug: introducing-mitti
