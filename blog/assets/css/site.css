@@ -29,7 +29,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-
 .content { min-width: 0; max-width: 800px; padding-top: 3px; }
 .nameplate { margin-bottom: 52px; font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 .eyebrow, .post-series { margin-bottom: 14px; font-size: .75rem; line-height: 1.5; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); }
-.home-title, .title, .post-title, .about-title, .section-heading { font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 4.3vw, 3.75rem); line-height: 1.1; letter-spacing: -.035em; text-wrap: balance; }
+.home-title, .title, .post-title, .about-title, .section-heading { font-family: var(--serif); font-weight: 400; font-size: clamp(2.4rem, 4.3vw, 3.75rem); line-height: 1.1; letter-spacing: -.035em; text-wrap: balance; overflow-wrap: break-word; }
 .home-title { max-width: 20ch; }
 .home-intro { max-width: 42rem; margin-bottom: 44px; }
 .home-copy, .subtitle { max-width: 36rem; margin: 20px 0; font-family: var(--serif); font-size: 1.25rem; line-height: 1.65; color: var(--text-soft); }
@@ -55,7 +55,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-
 .prose, .post-content { max-width: 40rem; font-family: var(--serif); font-size: 1.2rem; line-height: 1.8; color: var(--text-soft); overflow-wrap: break-word; }
 .prose p + p { margin-top: 1.2em; }
 .prose strong, .post-content strong { color: var(--text); font-weight: 600; }
-.prose h2, .post-content h2, .post-content h3 { margin: 1.9em 0 .6em; font-family: var(--sans); font-size: 1.3rem; font-weight: 600; line-height: 1.4; letter-spacing: -.025em; color: var(--text); text-wrap: balance; }
+.prose h2, .post-content h2, .post-content h3 { margin: 1.9em 0 .6em; font-family: var(--sans); font-size: 1.3rem; font-weight: 600; line-height: 1.4; letter-spacing: -.025em; color: var(--text); text-wrap: balance; overflow-wrap: break-word; }
 .post-content h3 { font-size: 1.1rem; }
 .prose blockquote, .post-content blockquote { margin: 1.5em 0; padding: 4px 0 4px 24px; border-left: 2px solid var(--accent); color: var(--text); }
 .post-title { max-width: 23ch; font-size: clamp(2.2rem, 4vw, 3.4rem); }
@@ -82,7 +82,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-
 .about-section > h2 { font-size: .8125rem; line-height: 1.6; font-weight: 500; color: var(--accent); padding-top: 6px; }
 .about-section .prose { font-size: 1.125rem; }
 .about-section .prose h3 { margin-bottom: 10px; font-family: var(--serif); font-size: 1.8rem; font-weight: 500; line-height: 1.2; color: var(--text); }
-.about-principles { color: var(--text); font-size: 1.4rem; line-height: 1.55; text-wrap: balance; }
+.about-principles { color: var(--text); font-size: 1.4rem; line-height: 1.55; text-wrap: balance; overflow-wrap: break-word; }
 .content-footer, .post-footer { margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 24px; align-items: center; font-size: .75rem; line-height: 1.6; color: var(--text-mute); }
 .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
 .footer-link { padding: 5px 0; transition: color .15s ease; }
