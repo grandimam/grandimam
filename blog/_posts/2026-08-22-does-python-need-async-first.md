@@ -7,6 +7,8 @@ reading_time: 3
 slug: does-python-still-need-to-be-async-first
 ---
 
+> **Project update:** Mitti is no longer being developed. I’m now building [Karak](https://github.com/grandimam/karak), an HTTP framework for free-threaded Python. This post describes the earlier experiment.
+
 If you are building APIs in Python that handle a lot of concurrent I/O, the standard answer today is often `asyncio` or a framework built around it. As a result, application code increasingly looks like this:
 
 ```python

@@ -21,6 +21,7 @@ layout: default
     </a>
 
     <nav class="site-nav" aria-label="Primary">
+      <a class="sidebar-link{% if page.url == "/framework/" %} active{% endif %}" href="{{ "/framework/" | relative_url }}">Framework</a>
       <a class="sidebar-link{% if writing_active %} active{% endif %}" href="{{ site.baseurl }}/">Writing</a>
       <a class="sidebar-link" href="{{ site.baseurl }}/about/">About</a>
     </nav>

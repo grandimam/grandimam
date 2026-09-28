@@ -1,6 +1,6 @@
 # Site settings
 title: Grandimam
-description: Personal homepage.
+description: "How I work, what I’m building, and what I’m learning. Currently building Karak, an HTTP framework for free-threaded Python."
 baseurl: ""
 url: "https://grandimam.com"
 

@@ -8,6 +8,7 @@ permalink: /about/
   <p>I’m a software engineer interested in building and understanding software systems.</p>
   <p>Most of my work is around Python, frameworks, runtimes, performance, and architecture.</p>
   <p>This is where I publish my projects, experiments, and writing.</p>
+  <p>I’m currently building <a class="inline-link" href="https://github.com/grandimam/karak">Karak</a>, an experimental HTTP framework for free-threaded Python. I’m exploring how synchronous code can handle requests in parallel using threads.</p>
   <p>Outside software, I’m interested in filmmaking, photography, design, and storytelling.</p>
   <h2>How I operate</h2>
   <p>Build judgment. Make things happen. Take bigger bets. Make others care. Build what compounds.</p>

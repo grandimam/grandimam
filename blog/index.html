@@ -12,6 +12,7 @@ title: Home
     </a>
 
     <nav class="site-nav" aria-label="Primary">
+      <a class="sidebar-link{% if page.url == "/framework/" %} active{% endif %}" href="{{ "/framework/" | relative_url }}">Framework</a>
       <a class="sidebar-link active" href="{{ site.baseurl }}/">Writing</a>
       <a class="sidebar-link" href="{{ site.baseurl }}/about/">About</a>
     </nav>
@@ -20,6 +21,21 @@ title: Home
   <main class="content">
     <div class="nameplate">{{ site.title }}</div>
 
+    <header class="home-intro">
+      <p class="eyebrow">How I operate</p>
+      <h1 class="home-title">Build judgment. Make things happen.</h1>
+      <p class="home-copy">Take bigger bets. Make others care. Build what compounds. These principles guide what I pursue and how I approach my work.</p>
+      <a class="inline-link" href="{{ '/framework/' | relative_url }}">Read my framework</a>
+    </header>
+
+    <section class="current-focus" aria-labelledby="focus-title">
+      <p class="eyebrow">Currently building</p>
+      <h2 id="focus-title" class="focus-title"><a class="inline-link" href="https://github.com/grandimam/karak">Karak</a></h2>
+      <p class="home-copy">I’m building an experimental HTTP framework for free-threaded Python, exploring how synchronous code can handle requests in parallel using threads.</p>
+      <a class="inline-link" href="https://github.com/grandimam/karak">Follow the work on GitHub</a>
+    </section>
+
+    <h2 class="eyebrow" id="writing">Writing</h2>
     {% if writing_posts.size == 0 %}
       <p class="empty">Nothing here yet.</p>
     {% else %}

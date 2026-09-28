@@ -8,6 +8,8 @@ slug: introducing-mitti
 excerpt: "I have been experimenting with a small ASGI web server called Mitti to better understand routing, validation, and framework overhead."
 ---
 
+> **Project update:** Mitti is no longer being developed. I’m now building [Karak](https://github.com/grandimam/karak), an HTTP framework for free-threaded Python. This post describes the earlier experiment.
+
 I have been experimenting with building a small ASGI web server called **Mitti**.
 
 The goal is not to replace FastAPI overnight, but to better understand how routing, validation, and framework overhead work under the hood.
