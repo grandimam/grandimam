@@ -1,66 +1,11 @@
 ---
 layout: default
-title: Home
+title: Posts
 ---
 
 {% assign writing_posts = site.posts | sort: "date" | reverse %}
-
-<div class="shell">
-  <aside class="sidebar">
-    <a class="brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }}">
-      {% include brand-mark.svg %}
-    </a>
-
-    <nav class="site-nav" aria-label="Primary">
-      <a class="sidebar-link{% if page.url == "/framework/" %} active{% endif %}" href="{{ "/framework/" | relative_url }}">Framework</a>
-      <a class="sidebar-link active" href="{{ site.baseurl }}/">Writing</a>
-      <a class="sidebar-link" href="{{ site.baseurl }}/about/">About</a>
-    </nav>
-  </aside>
-
-  <main class="content">
-    <div class="nameplate">{{ site.title }}</div>
-
-    <header class="home-intro">
-      <p class="eyebrow">How I operate</p>
-      <h1 class="home-title">Build judgment. Make things happen.</h1>
-      <p class="home-copy">Take bigger bets. Make others care. Build what compounds. These principles guide what I pursue and how I approach my work.</p>
-      <a class="inline-link" href="{{ '/framework/' | relative_url }}">Read my framework</a>
-    </header>
-
-    <section class="current-focus" aria-labelledby="focus-title">
-      <p class="eyebrow">Currently building</p>
-      <h2 id="focus-title" class="focus-title"><a class="inline-link" href="https://github.com/grandimam/karak">Karak</a></h2>
-      <p class="home-copy">I’m building an experimental HTTP framework for free-threaded Python, exploring how synchronous code can handle requests in parallel using threads.</p>
-      <a class="inline-link" href="https://github.com/grandimam/karak">Follow the work on GitHub</a>
-    </section>
-
-    <h2 class="eyebrow" id="writing">Writing</h2>
-    {% if writing_posts.size == 0 %}
-      <p class="empty">Nothing here yet.</p>
-    {% else %}
-      <section aria-label="Writing">
-        <ol class="row-list">
-          {% for post in writing_posts %}
-            <li class="row-item">
-              <a class="row-link" href="{{ site.baseurl }}{{ post.url }}">
-                <span class="row-title">{{ post.title }}</span>
-                <span class="row-meta">{{ post.date | date: "%B %d, %Y" }}</span>
-              </a>
-            </li>
-          {% endfor %}
-        </ol>
-      </section>
-    {% endif %}
-
-    <footer class="content-footer">
-      <div>&copy; 2026 {{ site.author.name }}.</div>
-      <div class="footer-links">
-        <a class="footer-link" href="https://github.com/grandimam" target="_blank" rel="noopener">GitHub</a>
-        <a class="footer-link" href="https://twitter.com/thegrandimam" target="_blank" rel="noopener">Twitter</a>
-        <a class="footer-link" href="{{ site.baseurl }}/feed.xml">RSS</a>
-      </div>
-    </footer>
-
-  </main>
-</div>
+<header class="feed-header">
+  <h1 class="section-heading">Posts</h1>
+  <p class="feed-description">Notes on building Karak, software, and the ideas behind my work.</p>
+</header>
+{% include post-list.html posts=writing_posts %}

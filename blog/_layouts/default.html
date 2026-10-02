@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% assign meta_description = page.description | default: site.description %}
+  {% if page.layout == 'post' %}{% assign meta_description = page.description | default: page.excerpt | default: site.description %}{% endif %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#ffffff">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
 
   <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
   <meta name="author" content="{{ site.author.name }}">
 
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
 
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
   <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/images/gi-logo.svg">
@@ -22,11 +24,27 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body>
-  {{ content }}
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="shell">
+    {% include profile.html %}
+    <div class="main-column">
+      {% include navigation.html %}
+      <main class="content" id="main-content">
+        {{ content }}
+      </main>
+      <footer class="content-footer">
+        <div>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}.</div>
+        <div class="footer-links">
+          <a class="footer-link" href="https://twitter.com/thegrandimam">Twitter</a>
+          <a class="footer-link" href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </div>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>

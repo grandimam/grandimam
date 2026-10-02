@@ -1,6 +1,6 @@
 # Site settings
 title: Grandimam
-description: "How I work, what I’m building, and what I’m learning. Currently building Karak, an HTTP framework for free-threaded Python."
+description: "Building Karak to own and understand the HTTP request path, from connection to response. Notes on software, systems, and the decisions behind them."
 baseurl: ""
 url: "https://grandimam.com"
 

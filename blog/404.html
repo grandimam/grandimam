@@ -4,21 +4,6 @@ title: Page Not Found
 permalink: /404.html
 ---
 
-<div class="shell">
-  <aside class="sidebar">
-    <a class="brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }}">
-      {% include brand-mark.svg %}
-    </a>
-
-    <nav class="site-nav" aria-label="Primary">
-      <a class="sidebar-link{% if page.url == "/framework/" %} active{% endif %}" href="{{ "/framework/" | relative_url }}">Framework</a>
-      <a class="sidebar-link" href="{{ site.baseurl }}/">Writing</a>
-      <a class="sidebar-link" href="{{ site.baseurl }}/about/">About</a>
-    </nav>
-  </aside>
-
-  <main class="content">
-    <div class="nameplate">{{ site.title }}</div>
     <header class="masthead">
       <div class="eyebrow">404</div>
       <h1 class="title">Page Not Found</h1>
@@ -28,15 +13,3 @@ permalink: /404.html
     <div class="prose">
       <p>The simplest next step is to go back to the <a class="inline-link" href="{{ site.baseurl }}/">homepage</a> and browse from there.</p>
     </div>
-
-    <footer class="content-footer">
-      <div>&copy; 2026 {{ site.author.name }}.</div>
-      <div class="footer-links">
-        <a class="footer-link" href="https://github.com/grandimam" target="_blank" rel="noopener">GitHub</a>
-        <a class="footer-link" href="https://twitter.com/thegrandimam" target="_blank" rel="noopener">Twitter</a>
-        <a class="footer-link" href="{{ site.baseurl }}/feed.xml">RSS</a>
-      </div>
-    </footer>
-
-  </main>
-</div>
