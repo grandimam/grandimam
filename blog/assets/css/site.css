@@ -18,18 +18,18 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-
 .skip-link { position: absolute; top: -80px; left: 20px; padding: 12px 18px; background: var(--bg); color: var(--accent); border: 1px solid var(--accent); z-index: 10; }
 .skip-link:focus { top: 12px; }
 .shell { width: min(700px, calc(100% - 48px)); margin: 0 auto; padding: 56px 0 32px; }
-.site-header { display: grid; gap: 28px; margin-bottom: 44px; }
-.profile { display: flex; align-items: center; gap: 14px; min-width: 0; }
-.brand { display: block; flex-shrink: 0; }
-.brand-mark { display: block; width: 48px; height: 48px; }
-.profile-identity { min-width: 0; }
+.site-header { display: grid; grid-template-columns: minmax(0, 1fr); width: 100%; gap: 28px; margin-bottom: 44px; }
+.profile { display: grid; grid-template-columns: 32px minmax(0, 1fr); align-items: center; gap: 10px; min-width: 0; }
+.brand { display: block; grid-column: 1; grid-row: 1; }
+.brand-mark { display: block; width: 32px; height: 32px; }
+.profile-identity { grid-column: 2; grid-row: 1; min-width: 0; }
 .profile-name { font-size: 1.25rem; font-weight: 500; letter-spacing: -.015em; }
 .profile-role { margin-top: 4px; font-size: .875rem; color: var(--text-mute); }
 .profile-role a:hover { color: var(--accent); }
 .home-intro { margin-bottom: 40px; }
 .intro-copy { max-width: 36rem; font-size: 1.0625rem; line-height: 1.75; color: var(--text-soft); }
 .main-column, .content { min-width: 0; }
-.site-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+.site-nav { display: flex; grid-column: 1 / -1; width: 100%; flex-wrap: wrap; justify-content: center; gap: 24px; }
 .nav-link { display: inline-flex; padding: 6px 0; font-size: .875rem; line-height: 1.4; color: var(--text-mute); }
 .nav-link:hover, .footer-link:hover { color: var(--accent); }
 .nav-link.active { color: var(--text); text-decoration: underline; text-underline-offset: .3em; text-decoration-thickness: 1px; }
