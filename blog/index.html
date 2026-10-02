@@ -4,13 +4,10 @@ title: Posts
 ---
 
 {% assign writing_posts = site.posts | sort: "date" | reverse %}
-<section class="home-intro" aria-label="My vision for Karak">
-  <p class="eyebrow">Building Karak</p>
-  <p class="intro-copy">I’m building <a class="inline-link" href="https://github.com/grandimam/karak">Karak</a> to own and understand the HTTP request path, from connection to response. I want to make deliberate decisions about how the server, execution model, routing, and application code fit together.</p>
-  <a class="intro-more inline-link" href="{{ '/about/' | relative_url }}">More about my vision <span aria-hidden="true">↗</span></a>
-</section>
+<div class="home-intro">
+  <p class="intro-copy">I’m building <a class="inline-link" href="https://github.com/grandimam/karak">Karak</a> and writing about what I learn along the way.</p>
+</div>
 <header class="feed-header">
   <h1 class="section-heading">Posts</h1>
-  <p class="feed-description">Notes on building Karak, software, and the ideas behind my work.</p>
 </header>
 {% include post-list.html posts=writing_posts %}

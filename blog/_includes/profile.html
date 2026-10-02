@@ -1,13 +1,4 @@
-<aside class="profile" aria-label="About {{ site.author.name }}">
-  <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-    {% include brand-mark.svg %}
-  </a>
-  <div class="profile-identity">
-    <p class="profile-name">{{ site.author.name }}</p>
-    <p class="profile-role"><a href="https://twitter.com/{{ site.social.twitter }}">@{{ site.social.github }}</a></p>
-  </div>
-  <div class="profile-links">
-    <a class="footer-link" href="https://github.com/{{ site.social.github }}">GitHub</a>
-    <a class="footer-link" href="{{ '/feed.xml' | relative_url }}">RSS</a>
-  </div>
-</aside>
+<div class="profile">
+  <a class="profile-name" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+  <p class="profile-role"><a href="https://twitter.com/{{ site.social.twitter }}">@{{ site.social.github }}</a></p>
+</div>

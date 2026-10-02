@@ -31,16 +31,18 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="shell">
-    {% include profile.html %}
-    <div class="main-column">
+    <header class="site-header">
+      {% include profile.html %}
       {% include navigation.html %}
+    </header>
+    <div class="main-column">
       <main class="content" id="main-content">
         {{ content }}
       </main>
       <footer class="content-footer">
         <div>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}.</div>
         <div class="footer-links">
-          <a class="footer-link" href="https://twitter.com/{{ site.social.twitter }}">Twitter</a>
+          <a class="footer-link" href="https://github.com/{{ site.social.github }}">GitHub</a>
           <a class="footer-link" href="{{ '/feed.xml' | relative_url }}">RSS</a>
         </div>
       </footer>

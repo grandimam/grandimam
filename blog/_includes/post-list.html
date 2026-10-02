@@ -6,7 +6,7 @@
       <li class="row-item">
         <a class="row-link" href="{{ post.url | relative_url }}">
           <span class="row-title">{{ post.title }}</span>
-          <time class="row-meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          <time class="row-meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
         </a>
       </li>
     {% endfor %}
