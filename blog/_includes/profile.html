@@ -1,4 +1,9 @@
 <div class="profile">
-  <a class="profile-name" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
-  <p class="profile-role"><a href="https://twitter.com/{{ site.social.twitter }}">@{{ site.social.github }}</a></p>
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.author.name }} home">
+    {% include brand-mark.svg %}
+  </a>
+  <div class="profile-identity">
+    <a class="profile-name" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+    <p class="profile-role"><a href="https://twitter.com/{{ site.social.twitter }}">@{{ site.social.github }}</a></p>
+  </div>
 </div>
