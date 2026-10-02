@@ -1,13 +1,11 @@
-<aside class="profile" aria-label="About Grandimam">
+<aside class="profile" aria-label="About {{ site.author.name }}">
   <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
     {% include brand-mark.svg %}
   </a>
   <div class="profile-identity">
     <p class="profile-name">{{ site.author.name }}</p>
-    <p class="profile-role">Building Karak</p>
+    <p class="profile-role">@{{ site.social.github }}</p>
   </div>
-  <p class="profile-bio">I’m building <a class="inline-link" href="https://github.com/grandimam/karak">Karak</a> to own and understand the HTTP request path, from connection to response. I want to make deliberate decisions about how the server, execution model, routing, and application code fit together.</p>
-  <a class="profile-more inline-link" href="{{ '/about/' | relative_url }}">More about my vision <span aria-hidden="true">↗</span></a>
   <div class="profile-links">
     <a class="footer-link" href="https://github.com/{{ site.social.github }}">GitHub</a>
     <a class="footer-link" href="{{ '/feed.xml' | relative_url }}">RSS</a>

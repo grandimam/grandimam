@@ -8,7 +8,7 @@ description: "My vision for Karak: owning and understanding the HTTP request pat
 <header class="about-header">
   <p class="eyebrow">About</p>
   <h1 class="about-title">Owning the HTTP stack.</h1>
-  <p class="about-intro">I’m Grandimam. I’m building Karak to own and understand the HTTP request path, from connection to response.</p>
+  <p class="about-intro">I’m Fauzan Baig, known online as grandimam. I’m building Karak to own and understand the HTTP request path, from connection to response.</p>
 </header>
 
 <section class="about-section" aria-labelledby="about-building">
@@ -28,12 +28,5 @@ description: "My vision for Karak: owning and understanding the HTTP request pat
     <p class="about-principles">Build judgment. Make things happen. Take bigger bets. Make others care. Build what compounds.</p>
     <p>These principles guide what I pursue and how I approach my work.</p>
     <p><a class="inline-link" href="{{ '/framework/' | relative_url }}">Read my framework</a></p>
-  </div>
-</section>
-
-<section class="about-section" aria-labelledby="about-interests">
-  <h2 id="about-interests">Outside software</h2>
-  <div class="prose">
-    <p>I’m interested in filmmaking, photography, design, and storytelling.</p>
   </div>
 </section>

@@ -1,12 +1,12 @@
 # Site settings
-title: Grandimam
+title: Fauzan Baig
 description: "Building Karak to own and understand the HTTP request path, from connection to response. Notes on software, systems, and the decisions behind them."
 baseurl: ""
 url: "https://grandimam.com"
 
 # Author
 author:
-  name: Grandimam
+  name: Fauzan Baig
 
 # Social
 social:
