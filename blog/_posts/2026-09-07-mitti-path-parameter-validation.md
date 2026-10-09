@@ -1,9 +1,7 @@
 ---
-layout: post
-topic: projects
+topic: python
 title: "Introducing Mitti"
 date: 2026-09-07
-reading_time: 1
 slug: introducing-mitti
 excerpt: "I have been experimenting with a small ASGI web server called Mitti to better understand routing, validation, and framework overhead."
 ---

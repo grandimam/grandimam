@@ -1,15 +1,71 @@
 ---
 layout: default
 ---
+{%- assign post_topic = site.topics | where: "name", page.topic | first -%}
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign show_toc = false -%}
+{%- if page.toc == true -%}{%- assign show_toc = true -%}
+{%- elsif page.toc != false and words >= site.toc_min_words -%}{%- assign show_toc = true -%}{%- endif -%}
+{%- if page.series -%}
+  {%- assign series_posts = site.posts | where: "series", page.series | sort: "date" -%}
+  {%- for p in series_posts -%}{%- if p.url == page.url -%}{%- assign series_index = forloop.index -%}{%- endif -%}{%- endfor -%}
+{%- endif -%}
 
-<header class="post-header">
-  {% if page.series %}<div class="post-series">{{ page.series }}</div>{% endif %}
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% if page.reading_time %}<span>{{ page.reading_time }} min read</span>{% endif %}
-  </div>
-</header>
-<article class="post-article">
+<article class="post-article{% if page.kind == 'note' %} is-note{% endif %}">
+  <header class="post-header">
+    <div class="post-kicker">
+      {%- if page.kind == 'note' -%}<a href="{{ '/notes/' | relative_url }}">Note</a>{%- endif -%}
+      {%- if page.kind == 'note' and post_topic %} · {% endif -%}
+      {%- if post_topic -%}<a href="{{ '/' | append: post_topic.name | append: '/' | relative_url }}">{{ post_topic.title }}</a>{%- endif -%}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.updated %}<span>Updated <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: "%B %-d, %Y" }}</time></span>{% endif %}
+      <span>{% include reading-time.html content=content %} min read</span>
+    </div>
+    {% if page.series %}
+      <p class="post-series">Part {{ series_index }} of {{ series_posts.size }} in <a href="#series">{{ page.series }}</a></p>
+    {% endif %}
+  </header>
+
+  {% if show_toc %}<nav class="toc" aria-label="Contents" data-toc hidden><p class="toc-title">Contents</p><ol></ol></nav>{% endif %}
+
   <div class="post-content">{{ content }}</div>
+
+  <footer class="post-end">
+    {% if page.series %}
+      <section class="series-box" id="series" aria-labelledby="series-title">
+        <h2 class="end-heading" id="series-title">{{ page.series }}</h2>
+        <ol class="series-list">
+          {% for p in series_posts %}
+            <li>{% if p.url == page.url %}<span aria-current="page">{{ p.title }}</span>{% else %}<a href="{{ p.url | relative_url }}">{{ p.title }}</a>{% endif %}</li>
+          {% endfor %}
+        </ol>
+      </section>
+    {% endif %}
+
+    {% if post_topic %}
+      {% assign related = site.posts | where: "topic", page.topic | where_exp: "p", "p.url != page.url" %}
+      {% if related.size > 0 %}
+        <section aria-labelledby="related-title">
+          <h2 class="end-heading" id="related-title">More on {{ post_topic.title }}</h2>
+          <ul class="related-list">
+            {% for p in related limit: 3 %}
+              <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a><time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%b %Y" }}</time></li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
+    {% endif %}
+
+    {% if page.previous or page.next %}
+      <nav class="pager" aria-label="More posts">
+        {% if page.previous %}<a class="pager-link" href="{{ page.previous.url | relative_url }}"><span class="pager-label">Older</span><span class="pager-title">{{ page.previous.title }}</span></a>{% else %}<span></span>{% endif %}
+        {% if page.next %}<a class="pager-link pager-next" href="{{ page.next.url | relative_url }}"><span class="pager-label">Newer</span><span class="pager-title">{{ page.next.title }}</span></a>{% endif %}
+      </nav>
+    {% endif %}
+
+    <p class="subscribe">Follow new posts via <a href="{{ '/feed.xml' | relative_url }}">RSS</a> or on <a href="https://twitter.com/{{ site.social.twitter }}">X</a>.</p>
+  </footer>
 </article>

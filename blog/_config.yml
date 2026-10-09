@@ -1,65 +1,96 @@
 # Site settings
 title: Fauzan Baig
-description: "Building Karak to own and understand the HTTP request path, from connection to response. Notes on software, systems, and the decisions behind them."
+tagline: "I build things I wish existed."
+description: "Fauzan Baig writes about Python and HTTP systems, agentic software engineering, and the work of building software."
 baseurl: ""
 url: "https://grandimam.com"
+lang: en_US
 
 # Author
 author:
   name: Fauzan Baig
+  url: "https://grandimam.com"
 
-# Social
+# Social (used by templates and jekyll-seo-tag)
 social:
+  name: Fauzan Baig
   github: grandimam
   twitter: grandimam_
+  links:
+    - https://github.com/grandimam
+    - https://twitter.com/grandimam_
+twitter:
+  username: grandimam_
+  card: summary
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-future: true
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+# Posts dated in the future are not published until that date (scheduling).
+future: false
+# Reading speed used for computed reading time.
+words_per_minute: 230
+# Posts longer than this get a table of contents (or set `toc: true`).
+toc_min_words: 1200
+
+# Every post gets its URL from its filename: _posts/2026-10-10-my-post.md -> /posts/my-post/
+# Notes live in notes/_posts/ and are published at /notes/<name>/.
 permalink: /posts/:slug/
-paginate: 10
-paginate_path: "/page:num/"
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /posts/:slug/
-
-# Defaults
+# Defaults: new posts only need `title` and `topic`.
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+      kind: "essay"
+  - scope:
+      path: "notes"
+      type: "posts"
+    values:
+      layout: "post"
+      kind: "note"
+      permalink: /notes/:slug/
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
 
-# Topics
+# Topics. Use one per post (`topic: python`). Topics with no posts are hidden.
 topics:
-  - name: projects
-    title: Projects
-  - name: opinions
-    title: Opinion Pieces
+  - name: python
+    title: Python
+    description: "Servers, frameworks, concurrency, and free-threaded Python."
+  - name: agentic
+    title: Agentic Engineering
+    description: "Working with AI coding tools in practice: costs, limits, and workflows."
+  - name: careers
+    title: Careers
+    description: "Hiring, evaluation, and how the market prices engineering work."
+  - name: islam
+    title: Islam
+    description: "Notes on faith and practice."
 
 # Exclude from build
 exclude:
   - Gemfile
   - Gemfile.lock
+  - Makefile
   - node_modules
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
   - README.md
+  - scripts/
 
 # Plugins
 plugins:
-  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap

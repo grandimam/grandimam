@@ -1,9 +1,7 @@
 ---
-layout: post
-topic: opinions
+topic: careers
 title: "Distorted Reality"
 date: 2026-07-08
-reading_time: 4
 slug: distorted-reality
 excerpt: "When you divide performance by salary, being expensive looks like underperforming. The metric quietly shifts from impact to intelligence per dollar, and everyone reading it ends up believing something that is not true."
 ---

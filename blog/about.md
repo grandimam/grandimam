@@ -1,32 +1,52 @@
 ---
-layout: page
 title: About
 permalink: /about/
-description: "My vision for Karak: owning and understanding the HTTP request path, from connection to response."
+updated: 2026-10-10
+description: "Fauzan Baig is a software engineer who builds things to understand them: Python and HTTP systems, agentic software engineering, and the work of building software."
 ---
 
 <header class="about-header">
-  <p class="eyebrow">About</p>
-  <h1 class="about-title">Owning the HTTP stack.</h1>
-  <p class="about-intro">I’m Fauzan Baig (<a class="inline-link" href="https://twitter.com/{{ site.social.twitter }}">@grandimam</a>). I’m building Karak to own and understand the HTTP request path, from connection to response.</p>
+  <h1 class="about-title">I build things I wish existed.</h1>
+  <p class="about-intro">I’m Fauzan Baig, a software engineer since the late 2010s, mostly working on Python backends. I learn by building, and I don’t trust that I understand something until I’ve built it myself.</p>
 </header>
 
-<section class="about-section" aria-labelledby="about-building">
-  <h2 id="about-building">My vision for Karak</h2>
+<section class="about-section" aria-labelledby="about-understanding">
+  <h2 id="about-understanding">Understanding over output</h2>
   <div class="prose">
-    <h3><a class="inline-link" href="https://github.com/grandimam/karak">Karak</a></h3>
-    <p>I want to understand what happens between a connection arriving and a response leaving, and have the freedom to shape that path. That means thinking about the server, execution model, routing, and application code together.</p>
-    <p>The boundaries between those layers matter. Where does a request wait? What owns its resources? What happens when it times out or the client disconnects? I want to be able to trace those decisions through the stack and make their behavior explicit.</p>
-    <p>Owning the stack gives me room to question the assumptions each layer inherits. It lets me explore how concurrency, performance, and the experience of writing an application influence one another.</p>
-    <p>This is the direction I want to take Karak. It is still experimental; the complete stack is an ambition I’m working toward. This blog is where I’ll share the implementation decisions, experiments, and lessons along the way.</p>
+    <p>Most of what I build comes from the same itch. I wrote an ASGI framework to see where routing and validation overhead actually come from. I’m building an HTTP framework because I want to know what happens between a connection arriving and a response leaving. I made a tool to help me understand what AI wrote, and another for building a curriculum and proving you’ve learned it.</p>
+    <p>I write a lot of code with AI agents, more than 200K lines in the past year. That has made me more interested in understanding, not less. When code is cheap, the scarce things are judgment, knowing what’s worth building, and being able to tell whether it’s any good.</p>
+    <p>I start a lot of things and some don’t last. When an experiment has taught me what it can, I say so and move on to the next one.</p>
   </div>
 </section>
 
-<section class="about-section" aria-labelledby="about-framework">
-  <h2 id="about-framework">How I operate</h2>
+<section class="about-section" aria-labelledby="about-now">
+  <h2 id="about-now">Now</h2>
   <div class="prose">
-    <p class="about-principles">Build judgment. Make things happen. Take bigger bets. Make others care. Build what compounds.</p>
-    <p>These principles guide what I pursue and how I approach my work.</p>
-    <p><a class="inline-link" href="{{ '/framework/' | relative_url }}">Read my framework</a></p>
+    <p><a class="inline-link" href="https://github.com/grandimam/karak">Karak</a> is an HTTP framework for free-threaded Python. I want to own the whole request path: server, execution model, routing, and application code, designed together. The questions I keep returning to: where does a request wait, what owns its resources, and what happens when it times out or the client disconnects? It’s still experimental, and I write up the decisions here as I make them.</p>
+    <p>Alongside it I’m working on <a class="inline-link" href="https://github.com/grandimam/wy">wy</a> and <a class="inline-link" href="https://github.com/grandimam/loha">loha</a>. Everything else I’ve built is on the <a class="inline-link" href="{{ '/projects/' | relative_url }}">projects</a> page.</p>
+    <p class="about-updated">Updated <time datetime="{{ page.updated | date_to_xmlschema }}">{{ page.updated | date: "%B %Y" }}</time></p>
+  </div>
+</section>
+
+<section class="about-section" aria-labelledby="about-writing">
+  <h2 id="about-writing">What I write about</h2>
+  <ul class="about-topics">
+    {% for t in site.topics %}
+      {% assign t_count = site.posts | where: "topic", t.name | size %}
+      {% if t_count > 0 %}
+        <li><a class="inline-link" href="{{ '/' | append: t.name | append: '/' | relative_url }}">{{ t.title }}</a>: {{ t.description }}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <div class="prose">
+    <p>I write the way I build: in the open and before everything is figured out. Some posts are finished arguments, others are notes from the middle of the work.</p>
+  </div>
+</section>
+
+
+<section class="about-section" aria-labelledby="about-contact">
+  <h2 id="about-contact">Elsewhere</h2>
+  <div class="prose">
+    <p><a class="inline-link" href="https://github.com/{{ site.social.github }}">GitHub</a> · <a class="inline-link" href="https://twitter.com/{{ site.social.twitter }}">X (@{{ site.social.github }})</a> · <a class="inline-link" href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
   </div>
 </section>

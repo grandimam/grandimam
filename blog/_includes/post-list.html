@@ -1,14 +1,28 @@
+{%- comment -%}
+  Lists posts grouped by year.
+  Params: posts (required), show_topic (default true)
+{%- endcomment -%}
 {% if include.posts.size == 0 %}
   <p class="empty">Nothing here yet.</p>
 {% else %}
-  <ol class="row-list">
-    {% for post in include.posts %}
-      <li class="row-item">
-        <a class="row-link" href="{{ post.url | relative_url }}">
-          <span class="row-title">{{ post.title }}</span>
-          <time class="row-meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
-        </a>
-      </li>
-    {% endfor %}
-  </ol>
+  {% assign by_year = include.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in by_year %}
+    <section class="year-group" aria-labelledby="year-{{ year.name }}">
+      <h2 class="year-heading" id="year-{{ year.name }}">{{ year.name }}</h2>
+      <ol class="row-list">
+        {% for post in year.items %}
+          {% assign post_topic = site.topics | where: "name", post.topic | first %}
+          <li class="row-item">
+            <a class="row-link" href="{{ post.url | relative_url }}">
+              <span class="row-title">{{ post.title }}{% if post.kind == "note" %} <span class="badge">note</span>{% endif %}</span>
+              <span class="row-meta">
+                {%- if include.show_topic != false and post_topic -%}<span class="row-topic">{{ post_topic.title }}</span>{%- endif -%}
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+              </span>
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  {% endfor %}
 {% endif %}

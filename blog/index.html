@@ -1,13 +1,5 @@
 ---
 layout: default
-title: Posts
+title: Writing
 ---
-
-{% assign writing_posts = site.posts | sort: "date" | reverse %}
-<div class="home-intro">
-  <p class="intro-copy">I’m building <a class="inline-link" href="https://github.com/grandimam/karak">Karak</a> and writing about what I learn along the way.</p>
-</div>
-<header class="feed-header">
-  <h1 class="section-heading">Posts</h1>
-</header>
-{% include post-list.html posts=writing_posts %}
+{% include post-list.html posts=site.posts show_topic=false %}

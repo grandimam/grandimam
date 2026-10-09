@@ -1,0 +1,55 @@
+# Projects shown on /projects/.
+# status: active | experiment | archived
+# posts: list of post slugs (filename without the date) that discuss the project.
+
+- name: Karak
+  repo: grandimam/karak
+  url: https://www.karak.dev
+  language: Python
+  status: active
+  summary: "An HTTP framework for free-threaded Python. I want to own and understand the whole request path, from connection to response."
+
+- name: wy
+  repo: grandimam/wy
+  language: Rust
+  status: active
+  summary: "Helps you understand what AI wrote."
+
+- name: loha
+  repo: grandimam/loha
+  language: Python
+  status: active
+  summary: "A next-gen application server for Python."
+
+- name: Mitti
+  repo: grandimam/mitti
+  language: Python
+  status: archived
+  summary: "An ASGI framework built to understand routing, validation, and framework overhead. Replaced by Karak."
+  posts: [introducing-mitti, does-python-still-need-to-be-async-first]
+
+- name: osso
+  repo: grandimam/osso
+  language: Python
+  status: experiment
+  summary: "Build agents using barebone primitives."
+
+- name: hyre
+  repo: grandimam/hyre
+  language: Python
+  status: experiment
+  summary: "Simply better hiring agents."
+  posts: [how-hacker-rank-scores-engineers]
+
+- name: suki
+  repo: grandimam/suki
+  language: Python
+  status: experiment
+  summary: "Build your own curriculum. Prove you understand it."
+
+- name: state-of-india
+  repo: grandimam/state-of-india
+  url: https://grandimam.github.io/state-of-india/
+  language: Ruby
+  status: experiment
+  summary: "All state affairs."

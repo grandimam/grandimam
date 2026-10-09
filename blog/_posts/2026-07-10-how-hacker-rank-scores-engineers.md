@@ -1,9 +1,7 @@
 ---
-layout: post
-topic: opinions
+topic: careers
 title: "How HackerRank Scores Engineers"
 date: 2026-07-10
-reading_time: 7
 slug: how-hacker-rank-scores-engineers
 excerpt: "The hardest part of building an LLM scoring tool isn't the model — it's the rubric. HackerRank open-sourced theirs. I read it, ran it, and faked a few resumes to test it."
 ---

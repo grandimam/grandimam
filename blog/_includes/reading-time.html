@@ -1,0 +1,6 @@
+{%- comment -%}Usage: {% include reading-time.html content=post.content %}{%- endcomment -%}
+{%- assign rt_words = include.content | strip_html | number_of_words -%}
+{%- assign rt_half = site.words_per_minute | divided_by: 2 -%}
+{%- assign rt_minutes = rt_words | plus: rt_half | divided_by: site.words_per_minute -%}
+{%- if rt_minutes < 1 -%}{%- assign rt_minutes = 1 -%}{%- endif -%}
+{{- rt_minutes -}}

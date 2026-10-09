@@ -1,10 +1,8 @@
 ---
-layout: post
-topic: opinions
+topic: agentic
 title: "Speed is Cheap, Capability is Expensive"
 series: "Agentic Software Engineering"
 date: 2026-06-19
-reading_time: 3
 slug: speed-is-cheap-capability-is-expensive
 excerpt: "After 8+ months of heavy agentic coding, here is how I think about LLM costs and capability."
 ---

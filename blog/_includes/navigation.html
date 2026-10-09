@@ -1,9 +1,12 @@
-{% assign posts_active = false %}
-{% if page.url == '/' or page.layout == 'post' or page.layout == 'topic' %}
-  {% assign posts_active = true %}
-{% endif %}
+{%- assign writing_active = false -%}
+{%- if page.url == '/' or page.layout == 'post' or page.layout == 'topic' or page.layout == 'listing' -%}
+  {%- assign writing_active = true -%}
+{%- endif -%}
+{%- assign nav_items = "/projects/|Projects,/about/|About" | split: "," -%}
 <nav class="site-nav" aria-label="Primary">
-  <a class="nav-link{% if posts_active %} active{% endif %}" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Posts</a>
-  <a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
-  <a class="nav-link{% if page.url == '/framework/' %} active{% endif %}" href="{{ '/framework/' | relative_url }}"{% if page.url == '/framework/' %} aria-current="page"{% endif %}>Framework</a>
+  <a class="nav-link{% if writing_active %} active{% endif %}" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Writing</a>
+  {%- for item in nav_items -%}
+    {%- assign parts = item | split: "|" %}
+  <a class="nav-link{% if page.url == parts[0] %} active{% endif %}" href="{{ parts[0] | relative_url }}"{% if page.url == parts[0] %} aria-current="page"{% endif %}>{{ parts[1] }}</a>
+  {%- endfor %}
 </nav>

@@ -8,15 +8,22 @@ layout: null
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
     <atom:link href="{{ site.url }}{{ site.baseurl }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en</language>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    {% for post in site.posts limit:20 %}
+    {%- assign abs_href = 'href="' | append: site.url | append: '/' -%}
+    {%- assign abs_src = 'src="' | append: site.url | append: '/' -%}
+    {%- for post in site.posts limit:30 %}
+    {%- assign post_topic = site.topics | where: "name", post.topic | first %}
     <item>
-      <title>{{ post.title | xml_escape }}</title>
-      <description>{{ post.content | strip_html | truncate: 280 | xml_escape }}</description>
+      <title>{% if post.kind == "note" %}Note: {% endif %}{{ post.title | xml_escape }}</title>
+      <description>{{ post.content | replace: 'href="/', abs_href | replace: 'src="/', abs_src | xml_escape }}</description>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
       <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+      {%- if post_topic %}
+      <category>{{ post_topic.title | xml_escape }}</category>
+      {%- endif %}
     </item>
-    {% endfor %}
+    {%- endfor %}
   </channel>
 </rss>

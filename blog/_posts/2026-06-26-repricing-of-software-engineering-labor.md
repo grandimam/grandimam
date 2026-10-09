@@ -1,9 +1,7 @@
 ---
-layout: post
-topic: opinions
+topic: careers
 title: "Repricing of Software Engineering Labor"
 date: 2026-06-26
-reading_time: 7
 slug: repricing-of-software-engineering-labor
 excerpt: "As AI compresses implementation costs, the market is repricing software engineering labor—collapsing the premium for generalists while raising the value of deep expertise."
 ---

@@ -1,12 +1,10 @@
 ---
-layout: post
-topic: opinions
+topic: agentic
 title: "Writing Effective Skills"
 series: "Agentic Software Engineering"
 date: 2026-04-12
-reading_time: 2
 slug: writing-effective-skills
-excerpt: ""
+excerpt: "Writing code is moving to agents the way deployment moved to CI/CD. How the agentic loop works, and what makes a skill effective."
 ---
 
 > **Note:** This post is a work in progress and will be updated over time.

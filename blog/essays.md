@@ -1,6 +1,7 @@
 ---
-layout: topic
+layout: listing
 title: Essays
-topic: essays
+kind: essay
 permalink: /essays/
+description: "Longer, edited pieces."
 ---

@@ -1,7 +1,15 @@
+{%- comment -%}Filter bar. Param: active ('all', 'notes', or a topic name){%- endcomment -%}
 {% assign current = include.active | default: 'all' %}
-<nav class="topics">
-  <a href="{{ site.baseurl }}/" class="topic{% if current == 'all' %} active{% endif %}">all</a>
+{% assign note_count = site.posts | where: "kind", "note" | size %}
+<nav class="topics" aria-label="Filter posts">
+  <a href="{{ '/' | relative_url }}" class="topic{% if current == 'all' %} active{% endif %}"{% if current == 'all' %} aria-current="page"{% endif %}>All</a>
+  {% if note_count > 0 %}
+    <a href="{{ '/notes/' | relative_url }}" class="topic{% if current == 'notes' %} active{% endif %}"{% if current == 'notes' %} aria-current="page"{% endif %}>Notes</a>
+  {% endif %}
   {% for t in site.topics %}
-    <a href="{{ site.baseurl }}/{{ t.name }}/" class="topic{% if current == t.name %} active{% endif %}">{{ t.title | downcase }}</a>
+    {% assign t_count = site.posts | where: "topic", t.name | size %}
+    {% if t_count > 0 %}
+      <a href="{{ '/' | append: t.name | append: '/' | relative_url }}" class="topic{% if current == t.name %} active{% endif %}"{% if current == t.name %} aria-current="page"{% endif %}>{{ t.title }}</a>
+    {% endif %}
   {% endfor %}
 </nav>

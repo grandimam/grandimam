@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{%- comment -%}Lists posts by kind. Front matter: kind: essay|note{%- endcomment -%}
+{%- assign listing_posts = site.posts | where: "kind", page.kind -%}
+<header class="listing-header">
+  <h1 class="section-heading">{{ page.title }}</h1>
+  {% if page.description %}<p class="subtitle">{{ page.description }}</p>{% endif %}
+</header>
+{% if page.kind == 'note' %}{% include topics.html active='notes' %}{% endif %}
+{% include post-list.html posts=listing_posts %}
