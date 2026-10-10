@@ -2,4 +2,40 @@
 layout: default
 title: Writing
 ---
-{% include post-list.html posts=site.posts show_topic=false %}
+{%- assign statuses = "active,experiment,archived" | split: "," -%}
+{% if site.data.projects.size > 0 %}
+<section class="home-projects" id="projects" aria-labelledby="home-projects">
+  <h2 class="year-heading" id="home-projects">Projects</h2>
+  <ul class="featured-projects">
+    {%- for status in statuses %}
+    {%- assign items = site.data.projects | where: "status", status %}
+    {%- for p in items %}
+      <li class="featured-project">
+        <a class="featured-project-link" href="{% if p.url %}{{ p.url }}{% else %}https://github.com/{{ p.repo }}{% endif %}">
+          <span class="featured-project-name">{{ p.name | downcase }}{% if p.status != "active" %}<span class="badge">{{ p.status }}</span>{% endif %}</span>
+          <span class="featured-project-tagline">{{ p.tagline | default: p.summary }}</span>
+        </a>
+      </li>
+    {%- endfor %}
+    {%- endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="home-writing" aria-labelledby="home-writing">
+  <h2 class="year-heading" id="home-writing">Writing</h2>
+  {% if site.posts.size == 0 %}
+    <p class="empty">Nothing here yet.</p>
+  {% else %}
+  <ol class="row-list writing-list">
+    {% for post in site.posts %}
+      <li class="row-item">
+        <a class="row-link" href="{{ post.url | relative_url }}">
+          <span class="row-title">{{ post.title }}{% if post.kind == "note" %} <span class="badge">note</span>{% endif %}</span>
+          <span class="row-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time></span>
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+</section>

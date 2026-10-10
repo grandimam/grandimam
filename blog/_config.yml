@@ -1,6 +1,8 @@
 # Site settings
 title: Fauzan Baig
-tagline: "I build things I wish existed."
+tagline: "AI is leverage for people who never had any."
+# Handle shown in the site header.
+handle: grandimam
 description: "Fauzan Baig writes about Python and HTTP systems, agentic software engineering, and the work of building software."
 baseurl: ""
 url: "https://grandimam.com"
@@ -19,6 +21,14 @@ social:
   links:
     - https://github.com/grandimam
     - https://twitter.com/grandimam_
+# Social links shown under the name in the site header, in this order.
+social_links:
+  - name: X
+    url: https://twitter.com/grandimam_
+  - name: GitHub
+    url: https://github.com/grandimam
+  - name: RSS
+    url: /feed.xml
 twitter:
   username: grandimam_
   card: summary

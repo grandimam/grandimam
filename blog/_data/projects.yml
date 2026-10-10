@@ -1,5 +1,6 @@
-# Projects shown on /projects/.
+# Projects shown on the home page: active first, then experiments, then archived.
 # status: active | experiment | archived
+# tagline: short one-liner shown on the card (falls back to summary).
 # posts: list of post slugs (filename without the date) that discuss the project.
 
 - name: Karak
@@ -7,12 +8,14 @@
   url: https://www.karak.dev
   language: Python
   status: active
+  tagline: "Free-threaded Python HTTP"
   summary: "An HTTP framework for free-threaded Python. I want to own and understand the whole request path, from connection to response."
 
 - name: wy
   repo: grandimam/wy
   language: Rust
   status: active
+  tagline: "Agent decision provenance"
   summary: "Helps you understand what AI wrote."
 
 - name: loha
@@ -25,6 +28,7 @@
   repo: grandimam/mitti
   language: Python
   status: archived
+  tagline: "Python web framework"
   summary: "An ASGI framework built to understand routing, validation, and framework overhead. Replaced by Karak."
   posts: [introducing-mitti, does-python-still-need-to-be-async-first]
 

@@ -3,6 +3,9 @@ name: Deploy Jekyll site to Pages
 on:
   push:
     branches: ["main"]
+  schedule:
+    # Daily rebuild so future-dated (scheduled) posts go live on their date.
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 permissions:

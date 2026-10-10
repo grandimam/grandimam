@@ -44,7 +44,7 @@ Reading time is computed automatically.
 | `notes/_posts/` | Notes → `/notes/<name>/` |
 | `_drafts/` | Unpublished drafts |
 | `assets/posts/<name>/` | Images for a post |
-| `_data/projects.yml` | The `/projects/` page |
+| `_data/projects.yml` | The projects on the home page |
 | `about.md` | The `/about/` page. Update its "Now" section every few months |
 | `_config.yml` | Topics, site description, social links |
 | `assets/css/site.css` | Styles (colour variables at the top, dark mode included) |
