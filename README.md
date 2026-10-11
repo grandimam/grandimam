@@ -1,8 +1,6 @@
 ## grandimam
 
-**I raise my own Python 🐍**
-
-I am Fauzan Baig. I build Python runtimes and HTTP servers from the ground up, and write about what that takes at [grandimam.com](https://grandimam.com).
+**AI is the leverage for those who never had any**. I am Fauzan Baig. I build Python runtimes and HTTP servers from the ground up, and write about what that takes at [grandimam.com](https://grandimam.com).
 
 ### In Progress
 
