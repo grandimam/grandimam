@@ -1,4 +1,4 @@
-## [@grandimam](https://x.com/grandimam_)
+## grandimam
 
 **I raise my own Python 🐍**
 
