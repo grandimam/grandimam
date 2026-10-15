@@ -1,6 +1,5 @@
 <div class="profile">
   <a class="profile-name" href="https://twitter.com/{{ site.social.twitter }}" rel="me">@{{ site.handle }}</a>
-  <p class="profile-role">{{ site.tagline }}</p>
   <ul class="profile-social" aria-label="Elsewhere">
     {%- for link in site.social_links %}
     <li><a class="profile-social-link" href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"{% if link.url contains '://' %} rel="me"{% endif %}>{{ link.name }}</a></li>

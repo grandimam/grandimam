@@ -70,6 +70,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-
 .masthead, .post-header { margin-bottom: 32px; }
 .section-heading { margin-bottom: 32px; }
 .title { max-width: 22ch; }
+.home-header { container-type: inline-size; }
+.home-title { max-width: none; font-size: min(2.25rem, 5.4cqi); white-space: nowrap; text-wrap: nowrap; }
 .prose, .post-content { font-family: var(--sans); font-size: 1.125rem; line-height: 1.8; color: var(--text-soft); overflow-wrap: break-word; }
 .prose p + p { margin-top: 1.2em; }
 /* Justified body text; hyphenation keeps word spacing even, especially on narrow screens. */

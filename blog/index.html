@@ -1,22 +1,24 @@
 ---
 layout: default
-title: Writing
+title: Engineering Autonomous Systems
 ---
-{%- assign statuses = "active,experiment,archived" | split: "," -%}
-{% if site.data.projects.size > 0 %}
+<header class="about-header home-header">
+  <h1 class="title home-title">{{ site.title }}</h1>
+  <p class="subtitle">{{ site.description }}</p>
+</header>
+
+{%- assign featured_projects = site.data.projects | where_exp: "project", "project.featured_order != nil" | sort: "featured_order" -%}
+{% if featured_projects.size > 0 %}
 <section class="home-projects" id="projects" aria-labelledby="home-projects">
   <h2 class="year-heading" id="home-projects">Projects</h2>
   <ul class="featured-projects">
-    {%- for status in statuses %}
-    {%- assign items = site.data.projects | where: "status", status %}
-    {%- for p in items %}
+    {%- for p in featured_projects %}
       <li class="featured-project">
         <a class="featured-project-link" href="{% if p.url %}{{ p.url }}{% else %}https://github.com/{{ p.repo }}{% endif %}">
           <span class="featured-project-name">{{ p.name | downcase }}{% if p.status != "active" %}<span class="badge">{{ p.status }}</span>{% endif %}</span>
           <span class="featured-project-tagline">{{ p.tagline | default: p.summary }}</span>
         </a>
       </li>
-    {%- endfor %}
     {%- endfor %}
   </ul>
 </section>

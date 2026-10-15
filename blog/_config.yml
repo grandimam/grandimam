@@ -1,9 +1,9 @@
 # Site settings
-title: Fauzan Baig
-tagline: "AI is leverage for people who never had any."
+title: Engineering Autonomous Systems
+tagline: "From Outcomes to Systems."
 # Handle shown in the site header.
 handle: grandimam
-description: "Fauzan Baig writes about Python and HTTP systems, agentic software engineering, and the work of building software."
+description: "Exploring the engineering of autonomous software systems, from execution and state to decision-making, recovery, and verification."
 baseurl: ""
 url: "https://grandimam.com"
 lang: en_US
@@ -11,6 +11,7 @@ lang: en_US
 # Author
 author:
   name: Fauzan Baig
+  bio: "Software engineer exploring autonomous systems through first-principles engineering, experimentation, and building from scratch."
   url: "https://grandimam.com"
 
 # Social (used by templates and jekyll-seo-tag)

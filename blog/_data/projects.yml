@@ -1,9 +1,11 @@
-# Projects shown on the home page: active first, then experiments, then archived.
+# Project catalog. Only projects with a featured_order appear on the home page.
+# featured_order: display order on the home page (omit to hide).
 # status: active | experiment | archived
 # tagline: short one-liner shown on the card (falls back to summary).
 # posts: list of post slugs (filename without the date) that discuss the project.
 
 - name: Karak
+  featured_order: 1
   repo: grandimam/karak
   url: https://www.karak.dev
   language: Python
@@ -12,6 +14,7 @@
   summary: "An HTTP framework for free-threaded Python. I want to own and understand the whole request path, from connection to response."
 
 - name: wy
+  featured_order: 3
   repo: grandimam/wy
   language: Rust
   status: active
@@ -25,6 +28,7 @@
   summary: "A next-gen application server for Python."
 
 - name: Mitti
+  featured_order: 2
   repo: grandimam/mitti
   language: Python
   status: archived

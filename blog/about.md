@@ -1,29 +1,15 @@
 ---
 title: About
 permalink: /about/
-description: "AI is leverage for people who never had any. Fauzan Baig (@grandimam) builds and writes about what that takes."
+description: "Software engineer exploring autonomous systems through first-principles engineering, experimentation, and building from scratch."
 ---
 
-<header class="about-header">
-  <h1 class="about-title">{{ site.tagline }}</h1>
-</header>
-
-<section class="about-section about-section--intro">
 <div class="prose" markdown="1">
 
-Leverage has always been rationed. Capital, credentials, connections, the right passport, the right school. Most people’s options were decided by things they never chose.
+I believe the value of software comes from the outcomes it makes possible. What matters to me is whether a system can accomplish something useful and whether we can trust the result.
 
-AI changes the price of capability. One person can now learn, build, and ship what used to need a team, funding, or someone’s permission. That matters most for the people who started with the least: minorities, people far from the centres of money and power, people measured by systems that were never built for them.
+I start with the outcome I want, then work backward to understand what needs to exist. That’s what draws me to autonomous systems: software that can decide, act, recover, and verify what it achieved.
 
-I think that’s a way out. Economically, because you can own your work instead of renting out your time. Psychologically, because you no longer have to wait to be picked.
-
-But it isn’t automatic. Leverage without judgment is just speed. The people who benefit will be the ones who understand what they’re building.
-
-{% comment %}
-TODO(Fauzan): "Why it's personal". Add 3-5 sentences, in your words, about what
-not having leverage looked like for you, your family, or your community, and why
-this belief matters to you. Then delete this comment.
-{% endcomment %}
+This blog is where I explore those ideas by building from scratch, testing my assumptions, and sharing what I learn.
 
 </div>
-</section>
