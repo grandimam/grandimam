@@ -3,7 +3,7 @@ title: Engineering Autonomous Systems
 tagline: "From Outcomes to Systems."
 # Handle shown in the site header.
 handle: grandimam
-description: "Exploring the engineering of autonomous software systems, from execution and state to decision-making, recovery, and verification."
+description: "Starting with desired outcomes and building what they require, from language features and frameworks to autonomous systems."
 baseurl: ""
 url: "https://grandimam.com"
 lang: en_US
@@ -11,7 +11,7 @@ lang: en_US
 # Author
 author:
   name: Fauzan Baig
-  bio: "Software engineer exploring autonomous systems through first-principles engineering, experimentation, and building from scratch."
+  bio: "Software engineer working backward from desired outcomes, exploring systems through first principles, experimentation, and building from scratch."
   url: "https://grandimam.com"
 
 # Social (used by templates and jekyll-seo-tag)
