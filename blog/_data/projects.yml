@@ -27,6 +27,15 @@
   status: active
   summary: "A next-gen application server for Python."
 
+- name: CPython
+  featured_order: 4
+  repo: grandimam/cpython
+  language: C
+  status: experiment
+  tagline: "Experimental Python with None-aware access (?.)"
+  summary: "My CPython fork for implementing language ideas, starting with None-aware attribute access across the tokenizer, grammar, AST, compiler, and tests."
+  posts: [start-with-the-behavior]
+
 - name: Mitti
   featured_order: 2
   repo: grandimam/mitti

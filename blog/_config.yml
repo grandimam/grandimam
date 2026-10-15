@@ -1,9 +1,8 @@
 # Site settings
-title: Engineering Autonomous Systems
-tagline: "From Outcomes to Systems."
+title: From Outcomes to Systems
 # Handle shown in the site header.
 handle: grandimam
-description: "Starting with desired outcomes and building what they require, from language features and frameworks to autonomous systems."
+description: "I believe the value of software comes from what it makes possible. I start with a desired outcome, then work backward to understand and build what it needs."
 baseurl: ""
 url: "https://grandimam.com"
 lang: en_US
