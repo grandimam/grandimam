@@ -17,20 +17,20 @@ author:
 social:
   name: Fauzan Baig
   github: grandimam
-  twitter: grandimam_
+  twitter: thegrandimam
   links:
     - https://github.com/grandimam
-    - https://twitter.com/grandimam_
+    - https://twitter.com/thegrandimam
 # Social links shown under the name in the site header, in this order.
 social_links:
   - name: X
-    url: https://twitter.com/grandimam_
+    url: https://twitter.com/thegrandimam
   - name: GitHub
     url: https://github.com/grandimam
   - name: RSS
     url: /feed.xml
 twitter:
-  username: grandimam_
+  username: thegrandimam
   card: summary
 
 # Build settings

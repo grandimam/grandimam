@@ -14,4 +14,4 @@ I share those experiments and what I learn at [grandimam.com](https://grandimam.
 - [**cpython**](https://github.com/grandimam/cpython) - My experimental Python fork, including None-aware attribute access (`?.`).
 - [**karak**](https://github.com/grandimam/karak) - Experimental HTTP framework
 
-[Blog](https://grandimam.com) · [RSS](https://grandimam.com/feed.xml) · [X](https://twitter.com/grandimam_) · [GitHub](https://github.com/grandimam)
+[Blog](https://grandimam.com) · [RSS](https://grandimam.com/feed.xml) · [X](https://twitter.com/thegrandimam) · [GitHub](https://github.com/grandimam)
